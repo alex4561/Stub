@@ -1,0 +1,765 @@
+<!-- edited with XMLSpy v2007 sp1 (http://www.altova.com) by  () -->
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+	<soap:Body>
+		<m:getContractAndLossList_v3Response xmlns:m="http://www.perconalcabinet.sogaz.ru">
+			<m:return xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-03-20T00:00:00" Number="111 0100850224" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2017-03-20">
+					<d5p1:ID_Contract>0331e78a-a934-41bd-b675-d218ea242a52</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-03-20T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-03-19</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-03-30T00:00:00" Number="111 0200824813" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2017-03-30">
+					<d5p1:ID_Contract>033be8f8-3da9-450f-9391-e0cfa484d6a3</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-03-30T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-03-29</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-03-29T00:00:00" Number="111 0100838734" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2017-03-29">
+					<d5p1:ID_Contract>033de3c8-0cc9-412a-9bc3-0b343f371200</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-03-29T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-03-28</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2019-06-20T14:44:25" Number="ККК 3009488042" Product="Правила обязательного страхования гражданской ответственности владельцев транспортных средств" DateCalculation="2019-06-20">
+					<d5p1:ID_Contract>034144aa-931f-11e9-94d6-9cb6549aa228</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2019-06-20T14:44:32</d5p1:BeginDate>
+					<d5p1:EndDate>2020-06-19</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-03-27T00:00:00" Number="111 0101884994" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2017-03-27">
+					<d5p1:ID_Contract>0352e8f5-e282-4d42-9544-0c45807d9385</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-03-27T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-03-26</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-03-20T00:00:00" Number="111 0100850203" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2017-03-20">
+					<d5p1:ID_Contract>0355b93e-2c38-48c9-b4e3-c8b099ae0b38</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-03-20T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-03-19</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2019-04-11T00:00:00" Number="GAZX11973708205000" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2019-04-11">
+					<d5p1:ID_Contract>035878f6-6807-48bf-b9e2-a83c4dd799a0</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2019-04-13T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2020-04-12</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2018-03-30T00:00:00" Number="111 0101876580" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2018-03-30">
+					<d5p1:ID_Contract>0373a887-a04f-4d09-ac91-4c700187456c</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2018-03-30T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2019-03-29</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-05-19T00:00:00" Number="111 0100846978" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2017-05-19">
+					<d5p1:ID_Contract>0376d6e2-c267-4467-9f86-2a0beb78749f</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-05-19T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-05-18</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-03-31T00:00:00" Number="111 0101865222" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2017-03-31">
+					<d5p1:ID_Contract>037cc2f8-9597-42ce-9641-745e2237e6b4</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-03-31T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-03-30</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-11-29T00:10:00" Number="ЕЕЕ 1015586556" Product="Правила обязательного страхования гражданской ответственности владельцев транспортных средств" DateCalculation="2017-11-29">
+					<d5p1:ID_Contract>03844bcd-9b47-4596-95b0-5587ec0ec13a</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-12-29T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-12-28</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-03-10T00:00:00" Number="111 0100850930" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2017-03-10">
+					<d5p1:ID_Contract>03859873-3404-4a64-89c6-c9443abfa8b5</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-04-13T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-04-12</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-03-31T00:00:00" Number="111 0101865358" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2017-03-31">
+					<d5p1:ID_Contract>03872a9b-6d4e-4a0d-b413-9a8b28a7d6b6</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-03-31T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-03-30</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-12-15T00:00:00" Number="111 0101141645" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2017-12-15">
+					<d5p1:ID_Contract>0388557a-8651-4c01-8f73-85e04c0888c6</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-12-29T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2019-03-26</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-03-20T00:10:00" Number="ЕЕЕ 0900602986" Product="Правила обязательного страхования гражданской ответственности владельцев транспортных средств" DateCalculation="2017-03-20">
+					<d5p1:ID_Contract>038d67d0-3dd6-4902-90c3-17520d523d3d</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-04-01T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-03-31</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-11-29T00:10:00" Number="ЕЕЕ 1015586577" Product="Правила обязательного страхования гражданской ответственности владельцев транспортных средств" DateCalculation="2017-11-29">
+					<d5p1:ID_Contract>0391594e-5009-44ca-9e92-12c60c9b29d8</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-12-30T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-12-29</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2018-03-29T00:00:00" Number="111 0101354393" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2018-03-29">
+					<d5p1:ID_Contract>0399384f-b34a-4e44-8476-60043aa6f8c3</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2018-03-30T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2019-03-29</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2019-06-11T00:00:00" Number="GAZX11941686520000" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2019-06-11">
+					<d5p1:ID_Contract>0399fd34-1cef-4ef6-af9a-71af6ff923b5</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2019-06-11T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2020-06-10</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-12-27T13:39:32" Number="ЕЕЕ 1022193883" Product="Правила обязательного страхования гражданской ответственности владельцев транспортных средств" DateCalculation="2017-12-27">
+					<d5p1:ID_Contract>039eddd7-2aa9-40df-9cfd-064ccd2c1e63</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2018-01-17T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2019-01-16</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2016-12-07T00:10:00" Number="ЕЕЕ 0389742789" Product="Правила обязательного страхования гражданской ответственности владельцев транспортных средств" DateCalculation="2016-12-07">
+					<d5p1:ID_Contract>03a10be0-48cf-4242-a0eb-88fda4dfd925</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2016-12-30T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2017-12-29</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-06-09T00:00:00" Number="111 0101888468" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2017-06-09">
+					<d5p1:ID_Contract>03aab307-764b-4fa6-b40c-d5b2b47c6c98</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-06-13T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-06-12</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-04-14T00:00:00" Number="111 0101592880" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2017-04-14">
+					<d5p1:ID_Contract>03b20875-2602-4837-9262-7b7bfe014f2c</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-04-25T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-04-24</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-03-29T00:00:00" Number="111 0100838916" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2017-03-29">
+					<d5p1:ID_Contract>03b3cbfc-98bc-4e18-91b6-8310cd3479d9</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-03-29T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-03-28</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-01-16T13:55:14" Number="ЕЕЕ 0903493620" Product="Правила обязательного страхования гражданской ответственности владельцев транспортных средств" DateCalculation="2017-01-16">
+					<d5p1:ID_Contract>03bc6b29-20c8-4fff-a62c-3119a1008f95</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-02-01T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-01-31</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-09-13T00:10:00" Number="ЕЕЕ 1004148858" Product="Правила обязательного страхования гражданской ответственности владельцев транспортных средств" DateCalculation="2017-09-13">
+					<d5p1:ID_Contract>03c6d794-134e-4808-b923-bb196ef83436</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-09-13T12:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-09-12</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2018-03-29T00:00:00" Number="111 0100219259" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2018-03-29">
+					<d5p1:ID_Contract>03ce9e97-3786-4b68-b73f-fd9579176371</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2018-03-31T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2019-03-30</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2018-06-18T00:10:00" Number="ЕЕЕ 1022313269" Product="Правила обязательного страхования гражданской ответственности владельцев транспортных средств" DateCalculation="2018-06-18">
+					<d5p1:ID_Contract>03f81eec-729c-11e8-94a3-9cb6549aa228</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2018-06-28T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2019-06-27</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-06-09T00:00:00" Number="111 0101888493" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2017-06-09">
+					<d5p1:ID_Contract>04096499-2db1-4f7e-bf66-0aae08631e17</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-06-13T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-06-12</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-06-27T00:10:00" Number="ЕЕЕ 1004157840" Product="Правила обязательного страхования гражданской ответственности владельцев транспортных средств" DateCalculation="2017-06-27">
+					<d5p1:ID_Contract>04099c2c-b841-4fc6-8c45-4b4df6bd3603</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-07-31T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-07-30</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-03-06T00:10:00" Number="ЕЕЕ 0903327276" Product="Правила обязательного страхования гражданской ответственности владельцев транспортных средств" DateCalculation="2017-03-06">
+					<d5p1:ID_Contract>0416dc4f-dacf-4a7f-b971-798a92a4c926</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-03-13T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-03-12</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-04-14T00:00:00" Number="111 0101874183" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2017-04-14">
+					<d5p1:ID_Contract>041d9dbc-8500-4322-aa3b-84dc3e87bb56</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-04-14T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-04-13</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2018-03-29T00:00:00" Number="111 0100219267" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2018-03-29">
+					<d5p1:ID_Contract>04307378-c486-4e08-91a4-ef5daa890cae</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2018-03-31T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2019-03-30</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2018-04-06T00:00:00" Number="111 0100850001" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2018-04-06">
+					<d5p1:ID_Contract>0431d022-2388-4952-a3da-41ef071b7f30</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2018-04-06T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2019-04-05</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2018-04-10T00:00:00" Number="111 0101903326" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2018-04-10">
+					<d5p1:ID_Contract>0435c33e-8e96-4766-b583-08c2999924c9</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2018-04-13T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2019-04-12</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-11-16T00:00:00" Number="111 0101861513" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2017-11-16">
+					<d5p1:ID_Contract>046724f5-f35d-4ef8-84a1-d5e54aaf1700</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-11-22T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-11-21</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2018-03-27T00:00:00" Number="111 0101876634" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2018-03-27">
+					<d5p1:ID_Contract>046aef57-c8ca-4da5-997e-ca7a7791a913</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2018-03-31T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2019-03-30</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2018-04-10T00:00:00" Number="111 0100522480" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2018-04-10">
+					<d5p1:ID_Contract>048542d8-0f2c-4968-80fc-e5ccb9ae1154</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2018-04-13T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2019-04-12</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-04-12T00:00:00" Number="111 0101865192" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2017-04-12">
+					<d5p1:ID_Contract>0495c9cb-f013-4f12-a8ba-af9e125b7923</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-04-12T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-04-11</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-03-20T00:00:00" Number="111 0100850186" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2017-03-20">
+					<d5p1:ID_Contract>0498a43e-6818-4b41-b90b-6b28b2d951e1</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-03-20T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-03-19</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2019-04-12T10:31:30" Number="GAZX11922317970000" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2019-04-12">
+					<d5p1:ID_Contract>04bc22ba-3cae-4e00-8b17-ab0402452225</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2019-04-13T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2020-04-12</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-01-16T13:55:14" Number="ЕЕЕ 0903493623" Product="Правила обязательного страхования гражданской ответственности владельцев транспортных средств" DateCalculation="2017-01-16">
+					<d5p1:ID_Contract>04c50d51-6786-40a9-863f-7c5599967f85</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-01-17T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-01-16</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2019-05-14T00:00:00" Number="GAZX11996699801000" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2019-05-14">
+					<d5p1:ID_Contract>04d6cf39-d894-4bbb-9db9-00601c748f56</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2019-05-19T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2020-05-18</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2019-04-12T00:00:00" Number="GAZX11967573149000" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2019-04-12">
+					<d5p1:ID_Contract>04d8448e-3893-4030-9d76-f1e2560ca2bc</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2019-04-12T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2020-04-11</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-06-09T00:00:00" Number="111 0101954983" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2017-06-09">
+					<d5p1:ID_Contract>04ddf32d-b1b1-42a1-a3b1-22b72574dd30</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-06-13T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-06-12</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2018-05-25T00:00:00" Number="16 TP 2142/35" Product="Правила страхования средств железнодорожного транспорта с 30.10.2015" DateCalculation="2018-05-25">
+					<d5p1:ID_Contract>04e9024e-413d-4691-8240-6ea95c50a05f</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2018-05-25T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-08-31</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-04-13T18:00:00" Number="111 0101886126" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2017-04-13">
+					<d5p1:ID_Contract>04f31b70-2164-4730-9829-c2e7b72b9b2c</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-04-13T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-04-12</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-06-09T00:00:00" Number="111 0101888458" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2017-06-09">
+					<d5p1:ID_Contract>04f7c8b7-8f93-49a9-8200-9888cbb1ace8</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-06-13T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-06-12</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-06-09T00:00:00" Number="111 0101954978" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2017-06-09">
+					<d5p1:ID_Contract>04fdb0da-8e5c-4133-bf4d-908b726d2dec</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-06-13T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-06-12</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-11-30T10:06:18" Number="ЕЕЕ 1015593785" Product="Правила обязательного страхования гражданской ответственности владельцев транспортных средств" DateCalculation="2017-11-30">
+					<d5p1:ID_Contract>0508d7ea-9871-4a50-b5fe-466aa4940db1</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-12-27T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-12-26</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-04-26T00:00:00" Number="111 0101858252" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2017-04-26">
+					<d5p1:ID_Contract>0527b2aa-530b-4f87-9285-b951c45e7984</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-04-27T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-04-26</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-02-09T09:15:56" Number="ЕЕЕ 0900602674" Product="Правила обязательного страхования гражданской ответственности владельцев транспортных средств" DateCalculation="2017-02-09">
+					<d5p1:ID_Contract>052f1a9f-a779-4b10-bad4-eb7fe1a23a61</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-02-10T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-02-09</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-05-31T00:10:00" Number="ЕЕЕ 1003151741" Product="Правила обязательного страхования гражданской ответственности владельцев транспортных средств" DateCalculation="2017-05-31">
+					<d5p1:ID_Contract>0534404c-eba2-431c-923e-763abfbe21b8</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-06-03T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-06-02</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-03-30T00:00:00" Number="111 0101892421" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2017-03-30">
+					<d5p1:ID_Contract>053b6953-e46e-4fe3-9561-c3a5936f3753</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-03-30T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-03-29</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-04-21T15:45:05" Number="ЕЕЕ 0903495353" Product="Правила обязательного страхования гражданской ответственности владельцев транспортных средств" DateCalculation="2017-04-21">
+					<d5p1:ID_Contract>053beeb7-7825-4e55-9f7a-fc87fe8c2186</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-04-22T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-04-21</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2019-05-29T00:10:00" Number="ККК 3005443884" Product="Правила обязательного страхования гражданской ответственности владельцев транспортных средств" DateCalculation="2019-05-29">
+					<d5p1:ID_Contract>053de101-8037-11e9-94d4-9cb6549aa228</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2019-06-15T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2020-06-14</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2019-05-29T00:10:00" Number="ККК 3005443885" Product="Правила обязательного страхования гражданской ответственности владельцев транспортных средств" DateCalculation="2019-05-29">
+					<d5p1:ID_Contract>053de103-8037-11e9-94d4-9cb6549aa228</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2019-06-15T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2020-06-14</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2019-05-29T00:10:00" Number="ККК 3005443886" Product="Правила обязательного страхования гражданской ответственности владельцев транспортных средств" DateCalculation="2019-05-29">
+					<d5p1:ID_Contract>053de105-8037-11e9-94d4-9cb6549aa228</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2019-06-15T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2020-06-14</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2018-03-29T00:00:00" Number="111 0100219291" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2018-03-29">
+					<d5p1:ID_Contract>05422762-9a99-42da-8eab-dccd30a4a60c</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2018-03-31T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2019-03-30</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2018-03-19T00:00:00" Number="111 0101963996" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2018-03-19">
+					<d5p1:ID_Contract>05501ea7-d10a-48ba-a950-21279acc6801</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2018-04-04T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2019-04-03</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-03-10T00:00:00" Number="111 0100850900" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2017-03-10">
+					<d5p1:ID_Contract>05587f26-63f7-4c1d-bf28-2a11f48dfedb</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-04-13T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-04-12</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-05-29T10:54:44" Number="ЕЕЕ 1003100936" Product="Правила обязательного страхования гражданской ответственности владельцев транспортных средств" DateCalculation="2017-05-29">
+					<d5p1:ID_Contract>0576006e-cb81-44e6-8b56-5ef85508c396</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-06-28T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-06-27</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-04-12T00:00:00" Number="111 0101890602" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2017-04-12">
+					<d5p1:ID_Contract>0583b9d5-8572-4ff4-b333-2270424a9160</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-04-13T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-04-12</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2018-09-26T00:00:00" Number="16 TP 2144/22" Product="Правила страхования средств железнодорожного транспорта с 30.10.2015" DateCalculation="2018-09-26">
+					<d5p1:ID_Contract>0586f402-3b0d-40a7-b5b9-15be629ab3b1</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2018-09-26T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-12-30</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-01-20T00:00:00" Number="5017 MT 0015/12" Product="Правила страхования средств транспорта и гражданской ответственности с 01.01.2015  (Одно ТС)" DateCalculation="2017-01-20">
+					<d5p1:ID_Contract>059631be-dbe7-4e14-bf26-0fd2e16b3b58</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-01-21T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-01-20</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2018-03-28T00:00:00" Number="111 0101354298" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2018-03-28">
+					<d5p1:ID_Contract>05c0670e-f3e7-423d-bc8c-a2ac89f38dd1</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2018-03-30T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2019-03-29</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2018-06-15T16:35:21" Number="ККК 3000697152" Product="Правила обязательного страхования гражданской ответственности владельцев транспортных средств" DateCalculation="2018-06-15">
+					<d5p1:ID_Contract>05c087bc-706f-11e8-94a2-9cb6549aa228</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2018-06-15T16:36:07</d5p1:BeginDate>
+					<d5p1:EndDate>2019-06-14</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-03-31T00:00:00" Number="111 0101865381" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2017-03-31">
+					<d5p1:ID_Contract>05cb61c6-a003-4d85-b39b-c1043dff50c2</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-03-31T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-03-30</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-01-30T00:00:00" Number="111 0101868687" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2017-01-30">
+					<d5p1:ID_Contract>05f1c645-fd36-41a9-a56c-59ecb072e838</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-02-02T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-02-01</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2018-11-22T11:08:31" Number="ККК 3001535079" Product="Правила обязательного страхования гражданской ответственности владельцев транспортных средств" DateCalculation="2018-11-22">
+					<d5p1:ID_Contract>05fe61a0-ee2e-11e8-94b6-9cb6549aa228</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2018-11-24T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2019-11-23</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2018-05-15T00:00:00" Number="111 0101899621" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2018-05-15">
+					<d5p1:ID_Contract>05feee17-fe89-408a-8fc9-e8c9de93e066</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2018-05-19T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2019-05-18</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2018-04-11T00:00:00" Number="111 0101899320" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2018-04-11">
+					<d5p1:ID_Contract>06099437-7b61-4158-855b-f540de490092</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2018-04-22T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2019-04-21</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2018-04-11T00:00:00" Number="111 0101899315" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2018-04-11">
+					<d5p1:ID_Contract>060995ef-c5d5-4fab-9765-363063eae8ff</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2018-04-22T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2019-04-21</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-11-10T00:10:00" Number="ЕЕЕ 1004241644" Product="Правила обязательного страхования гражданской ответственности владельцев транспортных средств" DateCalculation="2017-11-10">
+					<d5p1:ID_Contract>060cf8ab-fe9b-42c6-a076-5f7ca285b0a6</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-11-14T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-11-13</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-06-16T00:00:00" Number="111 0101586539" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2017-06-16">
+					<d5p1:ID_Contract>060ebd4f-75ff-428e-8368-42946258fc56</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-06-24T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-06-23</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-05-16T00:00:00" Number="111 0100136527" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2017-05-16">
+					<d5p1:ID_Contract>06103b1d-07bc-4bfd-b11e-63a6612f67a3</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-05-18T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-05-17</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-05-31T09:43:00" Number="ЕЕЕ 1003101189" Product="Правила обязательного страхования гражданской ответственности владельцев транспортных средств" DateCalculation="2017-05-31">
+					<d5p1:ID_Contract>06126a1d-fcfb-4bce-8dd1-c5fce7803bcd</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-06-30T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-06-29</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2018-03-28T00:00:00" Number="111 0101354333" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2018-03-28">
+					<d5p1:ID_Contract>061915ff-b303-421e-8060-387af1ecd9fb</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2018-03-30T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2019-03-29</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2018-03-30T00:00:00" Number="111 0100219367" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2018-03-30">
+					<d5p1:ID_Contract>0635ae71-9dfe-4d1c-b4e6-534eac6cfac8</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2018-03-31T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2019-03-30</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2018-03-21T00:00:00" Number="111 0101895158" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2018-03-21">
+					<d5p1:ID_Contract>0640eeb4-6737-4393-8617-0f7607fadce9</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2018-03-21T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2019-03-20</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2019-01-21T00:00:00" Number="3619 MT 0104" Product="Правила страхования средств транспорта и гражданской ответственности с 01.10.2018  (Одно ТС)" DateCalculation="2019-01-21">
+					<d5p1:ID_Contract>064361c9-e8ce-477f-84d1-e7e339b9c5e1</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2019-01-21T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2020-01-20</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2018-12-11T00:00:00" Number="GAZX11890428226000" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2018-12-11">
+					<d5p1:ID_Contract>0643df0c-f071-48b3-8d19-0a5b419236b2</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2018-12-15T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2019-12-14</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2019-04-11T00:00:00" Number="GAZX11984368587000" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2019-04-11">
+					<d5p1:ID_Contract>064db881-a5c9-4e00-b55d-ebb4710b467e</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2019-04-13T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2020-04-12</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2018-04-14T00:00:00" Number="111 0101944842" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2018-04-14">
+					<d5p1:ID_Contract>06560a05-097e-4881-b92f-515b967d8685</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2018-04-14T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2019-04-13</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-11-23T12:00:32" Number="ЕЕЕ 1022244904" Product="Правила обязательного страхования гражданской ответственности владельцев транспортных средств" DateCalculation="2017-11-23">
+					<d5p1:ID_Contract>065ffa85-c3ae-4d55-9877-7cf03ebabf28</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2018-01-20T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2019-01-19</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2018-06-14T00:00:00" Number="111 0101962314" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2018-06-14">
+					<d5p1:ID_Contract>0668c0a9-1b3e-4548-b9d9-5a5fb70de978</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2018-08-20T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2019-08-19</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-03-31T00:00:00" Number="111 0101865273" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2017-03-31">
+					<d5p1:ID_Contract>068031d8-7d92-4ef9-83ab-03632bba6e31</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-03-31T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-03-30</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-07-14T00:00:00" Number="111 0101586800" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2017-07-14">
+					<d5p1:ID_Contract>0690a098-da6d-4883-ae9e-c5f3bb7d0b18</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-07-17T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-07-16</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2018-12-11T00:00:00" Number="GAZX11872240075000" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2018-12-11">
+					<d5p1:ID_Contract>069e0f4d-f24a-4f02-95bc-b512eb3127b0</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2018-12-15T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2019-12-14</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-03-30T00:00:00" Number="111 0200811687" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2017-03-30">
+					<d5p1:ID_Contract>06a7a66c-77f6-4de0-8a12-b50ada32c390</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-03-30T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-03-29</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-11-16T00:00:00" Number="111 0101861544" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2017-11-16">
+					<d5p1:ID_Contract>06ae01a3-dc3a-46d3-aa90-7f686f9b1c03</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-11-22T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-11-21</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-09-04T15:20:12" Number="ЕЕЕ 1004182372" Product="Правила обязательного страхования гражданской ответственности владельцев транспортных средств" DateCalculation="2017-09-04">
+					<d5p1:ID_Contract>06aedc22-5002-4d10-b448-7dd887906f3e</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-09-05T15:20:19</d5p1:BeginDate>
+					<d5p1:EndDate>2018-09-04</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2018-03-26T00:00:00" Number="111 0101141815" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2018-03-26">
+					<d5p1:ID_Contract>06c510fe-e533-4cb7-8073-772f840c5097</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2018-03-27T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2019-03-26</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2018-03-29T00:00:00" Number="111 0101885670" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2018-03-29">
+					<d5p1:ID_Contract>06dfb5e8-8c2b-47a6-9c72-6f2eba8b5f89</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2018-03-29T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2019-03-28</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-03-30T00:00:00" Number="111 0101892412" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2017-03-30">
+					<d5p1:ID_Contract>06e138d2-f1c1-4e8a-b49b-b8633a5c434b</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-03-30T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-03-29</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2019-04-10T00:00:00" Number="GAZX11920720665000" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2019-04-10">
+					<d5p1:ID_Contract>06ed7094-b6ea-4054-b11f-cb1ab53bafee</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2019-04-13T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2020-04-12</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2019-07-15T00:00:00" Number="GAZX11913932456000" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2019-07-15">
+					<d5p1:ID_Contract>06f1b5b2-202d-4780-aef7-e3a4ae63ca37</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2019-07-26T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2020-07-25</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2017-03-30T00:00:00" Number="111 0200719544" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2017-03-30">
+					<d5p1:ID_Contract>07001751-24b9-4d4e-b8f6-adaac9f2c778</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2017-03-30T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2018-03-29</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2018-03-28T00:00:00" Number="111 0101354299" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2018-03-28">
+					<d5p1:ID_Contract>0708fb87-13ee-4e06-b241-a9b7fa0e8634</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2018-03-30T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2019-03-29</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2018-03-27T00:00:00" Number="111 0101354277" Product="Правила обязательного страхования гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на ОПО (с 11.03.2014)" DateCalculation="2018-03-27">
+					<d5p1:ID_Contract>07092108-293e-4538-98bc-0c59c01371bc</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2018-05-07T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2019-05-06</d5p1:EndDate>
+				</m:Contract>
+				<m:Contract xmlns:d5p1="http://www.integrator.sogaz.ru" Date="2018-07-10T00:10:00" Number="ККК 3000665923" Product="Правила обязательного страхования гражданской ответственности владельцев транспортных средств" DateCalculation="2018-07-10">
+					<d5p1:ID_Contract>070c97e0-8408-11e8-94aa-9cb6549aa228</d5p1:ID_Contract>
+					<d5p1:CurrencyCode>810</d5p1:CurrencyCode>
+					<d5p1:ID_Insurer>5418d523-7e34-11db-8708-003048800b16</d5p1:ID_Insurer>
+					<d5p1:BeginDate>2018-07-23T00:00:00</d5p1:BeginDate>
+					<d5p1:EndDate>2019-07-22</d5p1:EndDate>
+				</m:Contract>
+				<m:Loss xmlns:d5p1="http://www.integrator.sogaz.ru" DateLoss="2018-02-06T11:26:04" LossIncidentDate="2018-01-30T14:35:00" NumberLoss="ЕЕЕ 1004157840D№001">
+					<d5p1:ID_Loss>6b96539f-2891-4333-bc41-9d6b1c92fcdd</d5p1:ID_Loss>
+					<d5p1:LossCurrencyCode>810</d5p1:LossCurrencyCode>
+					<d5p1:ID_Contract>04099c2c-b841-4fc6-8c45-4b4df6bd3603</d5p1:ID_Contract>
+					<d5p1:Status>true</d5p1:Status>
+					<d5p1:LossPayout>98629.49</d5p1:LossPayout>
+					<d5p1:LossPayoutRub>98629.49</d5p1:LossPayoutRub>
+					<d5p1:LossAlert xsi:nil="true"/>
+				</m:Loss>
+				<m:Loss xmlns:d5p1="http://www.integrator.sogaz.ru" DateLoss="2017-07-31T13:20:10" LossIncidentDate="2017-07-14T13:10:00" NumberLoss="ЕЕЕ 0903493623D№001">
+					<d5p1:ID_Loss>dfa04e9e-b5de-48c0-807d-cc214eaf525c</d5p1:ID_Loss>
+					<d5p1:LossCurrencyCode>810</d5p1:LossCurrencyCode>
+					<d5p1:ID_Contract>04c50d51-6786-40a9-863f-7c5599967f85</d5p1:ID_Contract>
+					<d5p1:Status>true</d5p1:Status>
+					<d5p1:LossPayout>25400</d5p1:LossPayout>
+					<d5p1:LossPayoutRub>25400</d5p1:LossPayoutRub>
+					<d5p1:LossAlert xsi:nil="true"/>
+				</m:Loss>
+				<m:Loss xmlns:d5p1="http://www.integrator.sogaz.ru" DateLoss="2018-06-21T09:56:18" LossIncidentDate="2018-05-28T23:32:00" NumberLoss="16 TP 2142/35D№001">
+					<d5p1:ID_Loss>02667dd2-23a5-4660-b917-ef7c6ec65ffa</d5p1:ID_Loss>
+					<d5p1:LossCurrencyCode>810</d5p1:LossCurrencyCode>
+					<d5p1:ID_Contract>04e9024e-413d-4691-8240-6ea95c50a05f</d5p1:ID_Contract>
+					<d5p1:Status>false</d5p1:Status>
+					<d5p1:LossPayout>0</d5p1:LossPayout>
+					<d5p1:LossPayoutRub>0</d5p1:LossPayoutRub>
+					<d5p1:LossAlert xsi:nil="true"/>
+				</m:Loss>
+				<m:Loss xmlns:d5p1="http://www.integrator.sogaz.ru" DateLoss="2018-06-21T09:59:51" LossIncidentDate="2018-05-28T23:32:01" NumberLoss="16 TP 2142/35D№002">
+					<d5p1:ID_Loss>ae0def7f-4e81-4bd7-a95c-c92fd68938e4</d5p1:ID_Loss>
+					<d5p1:LossCurrencyCode>810</d5p1:LossCurrencyCode>
+					<d5p1:ID_Contract>04e9024e-413d-4691-8240-6ea95c50a05f</d5p1:ID_Contract>
+					<d5p1:Status>false</d5p1:Status>
+					<d5p1:LossPayout>0</d5p1:LossPayout>
+					<d5p1:LossPayoutRub>0</d5p1:LossPayoutRub>
+					<d5p1:LossAlert xsi:nil="true"/>
+				</m:Loss>
+				<m:Loss xmlns:d5p1="http://www.integrator.sogaz.ru" DateLoss="2018-06-21T10:04:04" LossIncidentDate="2018-05-28T23:32:02" NumberLoss="16 TP 2142/35D№003">
+					<d5p1:ID_Loss>e50656e7-b2c8-421a-bcc7-79f82923c14b</d5p1:ID_Loss>
+					<d5p1:LossCurrencyCode>810</d5p1:LossCurrencyCode>
+					<d5p1:ID_Contract>04e9024e-413d-4691-8240-6ea95c50a05f</d5p1:ID_Contract>
+					<d5p1:Status>false</d5p1:Status>
+					<d5p1:LossPayout>0</d5p1:LossPayout>
+					<d5p1:LossPayoutRub>0</d5p1:LossPayoutRub>
+					<d5p1:LossAlert xsi:nil="true"/>
+				</m:Loss>
+				<m:Rezult>true</m:Rezult>
+				<m:DataAccount>
+					<m:ID>К_5418d523-7e34-11db-8708-003048800b16</m:ID>
+					<m:ID_ListDuplicate xmlns:d6p1="http://www.integrator.sogaz.ru">
+						<d6p1:ID>К_5418d523-7e34-11db-8708-003048800b16</d6p1:ID>
+					</m:ID_ListDuplicate>
+				</m:DataAccount>
+				<m:Package>
+					<m:LastGuid>070c97e0-8408-11e8-94aa-9cb6549aa228</m:LastGuid>
+					<m:End>false</m:End>
+				</m:Package>
+			</m:return>
+		</m:getContractAndLossList_v3Response>
+	</soap:Body>
+</soap:Envelope>

@@ -1,0 +1,22 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+	<soap:Body>
+		<m:GetPaymentListResponse xmlns:m="http://www.perconalcabinet.sogaz.ru">
+			<m:return xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+				<m:Payment>
+					<m:ID_Contract>00000278-adaf-4a5c-9b56-46555c564874</m:ID_Contract>
+					<m:Date>2017-04-21</m:Date>
+					<m:CurrencyCode>810</m:CurrencyCode>
+					<m:Summ>2940.25</m:Summ>
+					<m:SummRUB>2940.25</m:SummRUB>
+				</m:Payment>
+				<m:Payment>
+					<m:ID_Contract>00000278-adaf-4a5c-9b56-46555c564874</m:ID_Contract>
+					<m:Date>2017-11-01</m:Date>
+					<m:CurrencyCode>810</m:CurrencyCode>
+					<m:Summ>3289.66</m:Summ>
+					<m:SummRUB>3289.66</m:SummRUB>
+				</m:Payment>
+			</m:return>
+		</m:GetPaymentListResponse>
+	</soap:Body>
+</soap:Envelope>

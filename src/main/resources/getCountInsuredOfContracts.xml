@@ -1,0 +1,12 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:m0="http://www.integrator.sogaz.ru">
+	<SOAP-ENV:Body>
+		<m:getCountInsuredOfContracts xmlns:m="http://www.perconalcabinet.sogaz.ru">
+			<m:ID_Dog>
+				<m0:ID>09dd3d65-ad16-42aa-bcb9-9083670e041d</m0:ID> <!--  -->
+				<m0:ID>cbda2a80-139a-4e6a-87bf-6b994b68f741</m0:ID>
+				<m0:ID>8478d1bc-77e9-4799-ac84-c3152153afd0</m0:ID> <!--договор без ЛС  -->
+				<m0:ID>c47faf75-d172-408e-8053-36cf795ebfe8</m0:ID>  <!-- договор ЛС, но нет ни одного действующего полиса -->
+			</m:ID_Dog>
+		</m:getCountInsuredOfContracts>
+	</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

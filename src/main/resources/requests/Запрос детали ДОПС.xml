@@ -1,0 +1,10 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:m0="http://www.integrator.sogaz.ru">
+	<SOAP-ENV:Body>
+		<m:getAgreementOfContract xmlns:m="http://www.perconalcabinet.sogaz.ru">
+			<m:ID_Dog>
+				<m0:ID>697e10f1-7b89-45fb-a565-7bc61e4dc927</m0:ID>
+				<m0:ID>6a0f74db-9031-4cdd-8f6f-9254690e3736</m0:ID>
+			</m:ID_Dog>
+		</m:getAgreementOfContract>
+	</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

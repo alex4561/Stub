@@ -1,0 +1,11 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+	<soap:Body>
+		<m:SetB2BOrderResponse xmlns:m="http://www.perconalcabinet.sogaz.ru">
+			<m:return xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+				<m:ID_Request>A53B0E0F-60F0-4F17-86F6-D43249B3C398</m:ID_Request>
+				<m:Status>Отклонено</m:Status>
+				<m:DateUpdate>2019-08-28T17:15:58</m:DateUpdate>
+			</m:return>
+		</m:SetB2BOrderResponse>
+	</soap:Body>
+</soap:Envelope>

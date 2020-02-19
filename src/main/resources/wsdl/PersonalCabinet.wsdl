@@ -1,0 +1,5330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+		xmlns:soap12bind="http://schemas.xmlsoap.org/wsdl/soap12/"
+		xmlns:soapbind="http://schemas.xmlsoap.org/wsdl/soap/"
+		xmlns:tns="http://www.perconalcabinet.sogaz.ru"
+		xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+		xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:xsd1="http://www.calc.sogaz.ru"
+		xmlns:xsd2="http://www.integrator.sogaz.ru"
+		xmlns:xsd3="http://www.perconalcabinet.sogaz.ru"
+		name="PersonalCabinet"
+		targetNamespace="http://www.perconalcabinet.sogaz.ru">
+	<types>
+		<xs:schema xmlns:tns="http://www.calc.sogaz.ru"
+				xmlns:xs="http://www.w3.org/2001/XMLSchema"
+				targetNamespace="http://www.calc.sogaz.ru"
+				attributeFormDefault="unqualified"
+				elementFormDefault="qualified">
+			<xs:complexType name="Calculation">
+				<xs:sequence>
+					<xs:element name="ID_Calculation"
+							type="tns:String50"/>
+					<xs:element name="CalcName"
+							type="tns:String50"/>
+					<xs:element name="Spacer"
+							type="xs:string"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="ItemList"
+							type="tns:Item"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="DateCalculation"
+							type="xs:date"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="InsAmount"
+							type="xs:decimal"
+							nillable="true"/>
+					<xs:element name="ItemTable"
+							type="tns:ItemTable"
+							nillable="true"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="BeginDate"
+							type="xs:dateTime"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="EndDate"
+							type="xs:date"
+							nillable="true"
+							minOccurs="0"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="CalculationList">
+				<xs:sequence>
+					<xs:element name="Calculation"
+							type="tns:Calculation"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="CoefficientItem">
+				<xs:sequence>
+					<xs:element name="Name"
+							type="xs:string"/>
+					<xs:element name="Value"
+							type="xs:decimal"/>
+					<xs:element name="IDRowTableCoefficient"
+							type="xs:string"
+							nillable="true"/>
+					<xs:element name="IDColumnTableCoefficient"
+							type="xs:string"
+							nillable="true"/>
+					<xs:element name="ID_Coefficient"
+							type="xs:string"
+							nillable="true"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="CoefficientItem_v2">
+				<xs:sequence>
+					<xs:element name="Name"
+							type="xs:string"/>
+					<xs:element name="Value"
+							type="tns:ValueItemType"
+							minOccurs="0"/>
+					<xs:element name="IDRowTableCoefficient"
+							type="xs:string"
+							nillable="true"/>
+					<xs:element name="IDColumnTableCoefficient"
+							type="xs:string"
+							nillable="true"/>
+					<xs:element name="ID_Coefficient"
+							type="xs:string"
+							nillable="true"/>
+					<xs:element name="ValueRef"
+							type="tns:Reference"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="ValueList"
+							type="tns:Item"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="Description"
+							type="xs:string"
+							nillable="true"/>
+				</xs:sequence>
+				<xs:attribute name="TypeValue"
+						type="tns:TypesValue"
+						use="required"/>
+			</xs:complexType>
+			<xs:complexType name="CoefficientTable">
+				<xs:sequence>
+					<xs:element name="CoefficientItem"
+							type="tns:CoefficientItem"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="Contract">
+				<xs:sequence>
+					<xs:element name="DateCalculation"
+							type="xs:date"/>
+					<xs:element name="ObjectList"
+							type="tns:Object"
+							maxOccurs="unbounded"/>
+					<xs:element name="Spacer"
+							type="xs:string"/>
+					<xs:element name="Product"
+							type="tns:String100"/>
+					<xs:element name="ID_Contract"
+							type="tns:String36"/>
+					<xs:element name="ContractItemList"
+							type="tns:Item"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="ContractItemTable"
+							type="tns:ItemTable"
+							nillable="true"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ContractList">
+				<xs:sequence>
+					<xs:element name="Contract"
+							type="tns:Contract"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="DetailItem">
+				<xs:sequence>
+					<xs:element name="ID_Coefficient"
+							type="xs:string"
+							nillable="true"/>
+					<xs:element name="IDColumnTableCoefficient"
+							type="xs:string"
+							nillable="true"/>
+					<xs:element name="IDRowTableCoefficient"
+							type="xs:string"
+							nillable="true"/>
+					<xs:element name="Data"
+							type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="Details">
+				<xs:sequence>
+					<xs:element name="DetailItems"
+							type="tns:DetailItem"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:simpleType name="Flat20_5">
+				<xs:restriction base="xs:decimal">
+					<xs:totalDigits value="20"/>
+					<xs:fractionDigits value="5"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:complexType name="Item">
+				<xs:sequence>
+					<xs:element name="Name"
+							type="xs:string"/>
+					<xs:element name="Value"
+							type="tns:ValueItemType"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="TypeValue"
+							type="tns:TypesValue"/>
+					<xs:element name="ValueRef"
+							type="tns:Reference"
+							nillable="true"
+							minOccurs="0"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ItemTable">
+				<xs:sequence>
+					<xs:element name="ItemList"
+							type="tns:Item"
+							maxOccurs="unbounded"/>
+					<xs:element name="TableName"
+							type="tns:String25"
+							minOccurs="0"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="Message">
+				<xs:sequence>
+					<xs:element name="MessageType"
+							type="xs:int"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="MessageCode"
+							type="xs:integer"
+							minOccurs="0"/>
+					<xs:element name="MessageText"
+							type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="Object">
+				<xs:sequence>
+					<xs:element name="CalculationList"
+							type="tns:Calculation"
+							maxOccurs="unbounded"/>
+					<xs:element name="ID_Object"
+							type="tns:String36"/>
+					<xs:element name="ObjectItemList"
+							type="tns:Item"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="ObjectItemTable"
+							type="tns:ItemTable"
+							nillable="true"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="Reference">
+				<xs:sequence>
+					<xs:element name="ID"
+							type="tns:String36"/>
+					<xs:element name="Name"
+							type="tns:String150"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultCalculation">
+				<xs:sequence>
+					<xs:element name="ID_Calculation"
+							type="xs:string"/>
+					<xs:element name="CalculatorVersionName"
+							type="xs:string"/>
+					<xs:element name="InsAmount"
+							type="xs:decimal"/>
+					<xs:element name="InsPremium"
+							type="xs:decimal"/>
+					<xs:element name="CoefficientTable"
+							type="tns:CoefficientItem"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="Error"
+							type="xs:string"
+							nillable="true"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultCalculationContract">
+				<xs:sequence>
+					<xs:element name="ResultCalculationObjectList"
+							type="tns:ResultCalculationObject"
+							maxOccurs="unbounded"/>
+					<xs:element name="ID_Contract"
+							type="tns:String50"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultCalculationContractList">
+				<xs:sequence>
+					<xs:element name="ResultCalculation"
+							type="tns:ResultCalculationContract"
+							maxOccurs="unbounded"/>
+					<xs:element name="ID_Rez"
+							type="tns:String36"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultCalculationContractList_v2">
+				<xs:sequence>
+					<xs:element name="ResultCalculation"
+							type="tns:ResultCalculationContract_v2"
+							maxOccurs="unbounded"/>
+					<xs:element name="ID_Rez"
+							type="tns:String36"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultCalculationContract_v2">
+				<xs:sequence>
+					<xs:element name="ResultCalculationObjectList"
+							type="tns:ResultCalculationObject_v2"
+							maxOccurs="unbounded"/>
+					<xs:element name="ID_Contract"
+							type="tns:String50"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultCalculationList">
+				<xs:sequence>
+					<xs:element name="ResultCalculation"
+							type="tns:ResultCalculation"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultCalculationObject">
+				<xs:sequence>
+					<xs:element name="ResultCalculation"
+							type="tns:ResultCalculation"
+							maxOccurs="unbounded"/>
+					<xs:element name="ID_Object"
+							type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultCalculationObject_v2">
+				<xs:sequence>
+					<xs:element name="ResultCalculation"
+							type="tns:ResultCalculation_v2"
+							maxOccurs="unbounded"/>
+					<xs:element name="ID_Object"
+							type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultCalculation_v2">
+				<xs:sequence>
+					<xs:element name="ID_Calculation"
+							type="xs:string"/>
+					<xs:element name="CalculatorVersionName"
+							type="xs:string"/>
+					<xs:element name="InsAmount"
+							type="xs:decimal"/>
+					<xs:element name="InsPremium"
+							type="xs:decimal"/>
+					<xs:element name="CoefficientTable"
+							type="tns:CoefficientItem_v2"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="Error"
+							type="xs:string"
+							nillable="true"/>
+					<xs:element name="Rezult"
+							type="xs:boolean"/>
+					<xs:element name="MessageList"
+							type="tns:Message"
+							nillable="true"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:simpleType name="String100">
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="100"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType name="String150">
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="150"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType name="String25">
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="25"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType name="String36">
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="36"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType name="String50">
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="50"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType name="TypesValue">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="Число"/>
+					<xs:enumeration value="Строка"/>
+					<xs:enumeration value="Дата"/>
+					<xs:enumeration value="Булево"/>
+					<xs:enumeration value="Ссылка"/>
+					<xs:enumeration value="СтопФактор"/>
+					<xs:enumeration value="Структура"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType name="ValueItemType">
+				<xs:union memberTypes="tns:String100 tns:Flat20_5 xs:dateTime xs:boolean"/>
+			</xs:simpleType>
+		</xs:schema>
+		<xs:schema xmlns:tns="http://www.integrator.sogaz.ru"
+				xmlns:xs="http://www.w3.org/2001/XMLSchema"
+				targetNamespace="http://www.integrator.sogaz.ru"
+				attributeFormDefault="unqualified"
+				elementFormDefault="qualified">
+			<xs:complexType name="AgreementOfContract">
+				<xs:sequence>
+					<xs:element name="ID_AgreementOfContract"
+							type="tns:String36"
+							nillable="true"/>
+					<xs:element name="ID_Contract"
+							type="tns:String36"/>
+					<xs:element name="CurrencyCode"
+							type="tns:String3"/>
+					<xs:element name="ID_Insurer"
+							type="tns:String36"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="Name_Insurer"
+							type="tns:String150"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="SectionContractItemsList"
+							type="tns:Section"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="ObjectList"
+							type="tns:Object"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="Spacer"
+							type="xs:string"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="ScheduleOfPaymentsList"
+							type="tns:ScheduleOfPaymentItem"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="BSOList"
+							type="tns:BSO_Item"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="MarketingActionsList"
+							type="tns:MarketingAction"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="ContragentList"
+							type="tns:ContragentItem"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="BeginDate"
+							type="xs:dateTime"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="EndDate"
+							type="xs:date"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="Files"
+							type="tns:FileItem"
+							nillable="true"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="DeltaInsPremium"
+							type="tns:Flat20_2"/>
+				</xs:sequence>
+				<xs:attribute name="Date"
+						type="xs:dateTime"
+						use="required"/>
+				<xs:attribute name="Number"
+						type="tns:String50"
+						use="required"/>
+				<xs:attribute name="Product"
+						type="tns:String150"
+						use="required"/>
+				<xs:attribute name="DateCalculation"
+						type="xs:date"/>
+				<xs:attribute name="ID_Calculation"
+						type="tns:String36"/>
+				<xs:attribute name="ID_UnitInsurer"
+						type="tns:String36"/>
+				<xs:attribute name="Name_UnitInsurer"
+						type="tns:String150"/>
+				<xs:attribute name="AgencyContractNumber"
+						type="tns:String100"/>
+				<xs:attribute name="AgencyContractDate"
+						type="xs:date"/>
+			</xs:complexType>
+			<xs:complexType name="BANK">
+				<xs:sequence>
+					<xs:element name="BIK"
+							nillable="true"
+							minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:length value="9"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="Swift"
+							nillable="true"
+							minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="11"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="CorrespondentAccount"
+							nillable="true"
+							minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:length value="20"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+				</xs:sequence>
+				<xs:attribute name="Name"
+						type="tns:String100"
+						use="required"/>
+			</xs:complexType>
+			<xs:complexType name="BSO_Item">
+				<xs:sequence>
+					<xs:element name="ID_TypeBSO"
+							type="tns:String36"/>
+					<xs:element name="Name_TypeBSO"
+							type="tns:String150"/>
+					<xs:element name="Series"
+							nillable="true">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="5"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="Number">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="15"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="Date"
+							type="xs:date"
+							nillable="true"
+							minOccurs="0"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="BankAccount">
+				<xs:sequence>
+					<xs:element name="ID"
+							type="tns:String36"/>
+					<xs:element name="Bank"
+							type="tns:BANK"/>
+					<xs:element name="Number"
+							type="tns:String30"/>
+					<xs:element name="DateOpen"
+							type="xs:dateTime"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="DateClose"
+							type="xs:dateTime"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="CurrencyCode"
+							type="tns:String3"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="CheckDocument">
+				<xs:sequence>
+					<xs:element name="Rezult"
+							type="xs:boolean"
+							nillable="true"
+							minOccurs="0"/>
+				</xs:sequence>
+				<xs:attribute name="Series"
+						use="required">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="14"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+				<xs:attribute name="Number"
+						use="required">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+			</xs:complexType>
+			<xs:complexType name="CheckDocumentList">
+				<xs:sequence>
+					<xs:element name="CheckDocument"
+							type="tns:CheckDocument"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="Coefficient">
+				<xs:sequence>
+					<xs:element name="ID_Coefficient"
+							type="xs:string"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="Name_Coefficient"
+							type="xs:string"/>
+					<xs:element name="Value"
+							type="tns:Flat30_5"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ContactInfo">
+				<xs:sequence>
+					<xs:element name="ID_TypeContactInfo"
+							type="tns:String36"/>
+					<xs:element name="Name_TypeContactInfo"
+							type="tns:String150"/>
+					<xs:element name="Description"
+							type="xs:string"/>
+					<xs:element name="Index"
+							minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="6"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="KLADR"
+							minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="25"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="OKATO"
+							minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="11"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="Country"
+							type="xs:string"
+							minOccurs="0"/>
+					<xs:element name="Area"
+							type="xs:string"
+							minOccurs="0"/>
+					<xs:element name="Region"
+							type="xs:string"
+							minOccurs="0"/>
+					<xs:element name="City"
+							type="xs:string"
+							minOccurs="0"/>
+					<xs:element name="Locality"
+							type="xs:string"
+							minOccurs="0"/>
+					<xs:element name="Street"
+							type="xs:string"
+							minOccurs="0"/>
+					<xs:element name="Home"
+							type="xs:string"
+							minOccurs="0"/>
+					<xs:element name="Housing"
+							type="xs:string"
+							minOccurs="0"/>
+					<xs:element name="Room"
+							type="xs:string"
+							minOccurs="0"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="Contract">
+				<xs:sequence>
+					<xs:element name="ID_Contract"
+							type="tns:String36"
+							nillable="true"/>
+					<xs:element name="CurrencyCode"
+							type="tns:String3"/>
+					<xs:element name="ID_Insurer"
+							type="tns:String36"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="Name_Insurer"
+							type="tns:String150"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="SectionContractItemsList"
+							type="tns:Section"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="ObjectList"
+							type="tns:Object"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="Spacer"
+							type="xs:string"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="ScheduleOfPaymentsList"
+							type="tns:ScheduleOfPaymentItem"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="BSOList"
+							type="tns:BSO_Item"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="MarketingActionsList"
+							type="tns:MarketingAction"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="ContragentList"
+							type="tns:ContragentItem"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="BeginDate"
+							type="xs:dateTime"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="EndDate"
+							type="xs:date"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="HistoryOfContract"
+							type="tns:Contract"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="Files"
+							type="tns:FileItem"
+							nillable="true"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="ID_ProlongedDog"
+							type="tns:String36"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="InsProgrammItemList"
+							type="tns:InsProgrammItem"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+				<xs:attribute name="Date"
+						type="xs:dateTime"
+						use="required"/>
+				<xs:attribute name="Number"
+						type="tns:String50"
+						use="required"/>
+				<xs:attribute name="Product"
+						type="tns:String150"
+						use="required"/>
+				<xs:attribute name="DateCalculation"
+						type="xs:date"/>
+				<xs:attribute name="ID_Calculation"
+						type="tns:String36"/>
+				<xs:attribute name="ID_UnitInsurer"
+						type="tns:String36"/>
+				<xs:attribute name="Name_UnitInsurer"
+						type="tns:String150"/>
+				<xs:attribute name="AgencyContractNumber"
+						type="tns:String100"/>
+				<xs:attribute name="AgencyContractDate"
+						type="xs:date"/>
+			</xs:complexType>
+			<xs:complexType name="ContractList">
+				<xs:sequence>
+					<xs:element name="Contract"
+							type="tns:Contract"
+							nillable="true"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="AgreementOfContract"
+							type="tns:AgreementOfContract"
+							nillable="true"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="Contragent">
+				<xs:complexContent>
+					<xs:extension base="tns:Person">
+						<xs:sequence>
+							<xs:element name="Name"
+									type="tns:String150"
+									nillable="true"
+									minOccurs="0"/>
+							<xs:element name="FullName"
+									type="xs:string"/>
+							<xs:element name="Type">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="Юр"/>
+										<xs:enumeration value="Физ"/>
+										<xs:enumeration value="ИП"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="INN"
+									nillable="true"
+									minOccurs="0">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:minLength value="10"/>
+										<xs:maxLength value="12"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="KPP"
+									nillable="true"
+									minOccurs="0">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="9"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="BANK"
+									type="tns:BANK"
+									nillable="true"
+									minOccurs="0"/>
+							<xs:element name="CurrentAccount"
+									nillable="true"
+									minOccurs="0">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="30"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="OPF_ID"
+									type="tns:String36"
+									nillable="true"
+									minOccurs="0"/>
+							<xs:element name="OPF_Name"
+									type="tns:String150"
+									nillable="true"
+									minOccurs="0"/>
+							<xs:element name="ContactInfoList"
+									type="tns:ContactInfo"
+									minOccurs="0"
+									maxOccurs="unbounded"/>
+							<xs:element name="DocumentList"
+									type="tns:Document"
+									minOccurs="0"
+									maxOccurs="unbounded"/>
+							<xs:element name="Category_ID"
+									type="tns:String36"
+									nillable="true"
+									minOccurs="0"/>
+							<xs:element name="Category_Name"
+									type="tns:String150"
+									nillable="true"
+									minOccurs="0"/>
+							<xs:element name="SectionContragentItemsList"
+									type="tns:Section"
+									nillable="true"
+									minOccurs="0"
+									maxOccurs="unbounded"/>
+							<xs:element name="CountryCode"
+									type="xs:int"
+									minOccurs="0"/>
+							<xs:element name="GUID"
+									type="tns:String36"
+									minOccurs="0"/>
+							<xs:element name="Resident"
+									type="xs:boolean"
+									minOccurs="0"/>
+							<xs:element name="OKVED"
+									type="xs:string"
+									nillable="true"
+									minOccurs="0"/>
+							<xs:element name="OKPO"
+									type="tns:String8"
+									nillable="true"
+									minOccurs="0"/>
+							<xs:element name="OGRN"
+									type="tns:String13"
+									nillable="true"
+									minOccurs="0"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="ContragentItem">
+				<xs:sequence>
+					<xs:element name="Contragent"
+							type="tns:Contragent"/>
+					<xs:element name="RolesList"
+							type="tns:RoleItem"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="Data_Item">
+				<xs:sequence>
+					<xs:element name="Data"
+							type="xs:base64Binary"
+							minOccurs="0"/>
+					<xs:element name="FileName"
+							type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="DeliveryRequest">
+				<xs:sequence>
+					<xs:element name="ContractNumberList"
+							type="xs:string"
+							maxOccurs="unbounded"/>
+					<xs:element name="Amount"
+							type="tns:Flat20_2"/>
+					<xs:element name="PayOnline"
+							type="xs:boolean"/>
+					<xs:element name="Recipient"
+							type="tns:Contragent"/>
+					<xs:element name="Email"
+							type="xs:string"/>
+					<xs:element name="Address"
+							type="xs:string"/>
+					<xs:element name="PhoneNumber"
+							type="xs:string"/>
+					<xs:element name="InvoiceNumber"
+							type="xs:string"
+							nillable="true"
+							minOccurs="0"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="Document">
+				<xs:sequence>
+					<xs:element name="ID_Type"
+							type="tns:String36"/>
+					<xs:element name="Name_Type"
+							type="tns:String150"/>
+					<xs:element name="IssuedDocument">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="300"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="DivisionCode">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="15"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="DateRegistrationOfResidence"
+							type="xs:date"/>
+					<xs:element name="SectionDocumentItemsList"
+							type="tns:Section"
+							nillable="true"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="BirthPlace"
+							nillable="true"
+							minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="20"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+				</xs:sequence>
+				<xs:attribute name="Series"
+						use="required">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="14"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+				<xs:attribute name="Number"
+						use="required">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+				<xs:attribute name="Date"
+						type="xs:date"
+						use="required"/>
+			</xs:complexType>
+			<xs:complexType name="FamilyPolicyID_Item">
+				<xs:sequence>
+					<xs:element name="ID_Polis"
+							type="tns:String50"/>
+					<xs:element name="ID_AssociatedInsured"
+							type="tns:String50"/>
+					<xs:element name="Name_AssociatedInsured"
+							type="tns:String150"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="FileItem">
+				<xs:sequence>
+					<xs:element name="guid"
+							type="tns:String36"
+							minOccurs="0"/>
+					<xs:element name="Name"
+							type="tns:String100"/>
+					<xs:element name="FileName"
+							type="tns:String150"
+							minOccurs="0"/>
+					<xs:element name="File"
+							type="xs:string"/>
+					<xs:element name="Type"
+							type="tns:String36"
+							minOccurs="0"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:simpleType name="Flat10_4">
+				<xs:restriction base="xs:decimal">
+					<xs:totalDigits value="20"/>
+					<xs:fractionDigits value="2"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType name="Flat20_2">
+				<xs:restriction base="xs:decimal">
+					<xs:totalDigits value="20"/>
+					<xs:fractionDigits value="2"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType name="Flat30_5">
+				<xs:restriction base="xs:decimal">
+					<xs:totalDigits value="30"/>
+					<xs:fractionDigits value="5"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType name="Flat5_2_NoNegative">
+				<xs:restriction base="xs:decimal">
+					<xs:minInclusive value="0"/>
+					<xs:totalDigits value="5"/>
+					<xs:fractionDigits value="2"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType name="ID_50">
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="50"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:complexType name="ID_ContractList">
+				<xs:sequence>
+					<xs:element name="ID_Contract"
+							type="tns:String36"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ID_List">
+				<xs:sequence>
+					<xs:element name="ID"
+							type="tns:ID_50"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:simpleType name="INN">
+				<xs:restriction base="xs:string">
+					<xs:minLength value="10"/>
+					<xs:maxLength value="12"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:complexType name="InsProgramm">
+				<xs:sequence>
+					<xs:element name="ID_Programm"
+							type="tns:String36"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="Name"
+							type="tns:String150"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="SectionPropertyList"
+							type="tns:Section"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="HaveCoPayments"
+							type="xs:boolean"/>
+					<xs:element name="RVL"
+							type="xs:boolean"/>
+					<xs:element name="RequestPolisVZROnLK"
+							type="xs:boolean"/>
+					<xs:element name="RequesCallBack"
+							type="xs:boolean"/>
+					<xs:element name="CallDoctorCurator"
+							type="xs:boolean"/>
+					<xs:element name="ProgrammServices"
+							type="tns:ProgrammService"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="InsProgrammItem">
+				<xs:sequence>
+					<xs:element name="ID_InsProgramm"
+							type="tns:String36"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="Name_InsProgramm"
+							type="tns:String150"/>
+					<xs:element name="InsAmount"
+							type="tns:Flat20_2"/>
+					<xs:element name="InsPremium"
+							type="tns:Flat20_2"/>
+					<xs:element name="InsCommission"
+							type="tns:Flat20_2"/>
+					<xs:element name="BeginDate"
+							type="xs:dateTime"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="EndDate"
+							type="xs:date"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="CoefficientList"
+							type="tns:Coefficient"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="ID_Franchise"
+							type="tns:String36"
+							minOccurs="0"/>
+					<xs:element name="Name_Franchise"
+							type="tns:String150"
+							minOccurs="0"/>
+					<xs:element name="FranchiseSumm"
+							type="tns:Flat20_2"
+							minOccurs="0"/>
+					<xs:element name="SectionInsProgrammtemsList"
+							type="tns:Section"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="ID_TariffRateOption"
+							type="tns:String36"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="Name_TariffRateOption"
+							type="tns:String150"
+							nillable="true"
+							minOccurs="0"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="Invoice">
+				<xs:sequence>
+					<xs:element name="ID_Invoice"
+							type="tns:String36"
+							minOccurs="0"/>
+					<xs:element name="Contragent"
+							type="tns:Contragent"/>
+					<xs:element name="Date"
+							type="xs:dateTime"/>
+					<xs:element name="Number"
+							type="tns:String30"/>
+					<xs:element name="CurrencyCode"
+							type="tns:String3"/>
+					<xs:element name="Account"
+							type="tns:Flat20_2"/>
+					<xs:element name="UnitOrganizationRef"
+							type="tns:Reference"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="OrganizationRef"
+							type="tns:Reference"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="Content"
+							type="tns:InvoiceRow"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="CurrencyRate"
+							type="tns:Flat10_4"/>
+					<xs:element name="CurrencyMultiplicity"
+							type="xs:integer"/>
+					<xs:element name="OrganizationBankAccount"
+							type="tns:Reference"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="Operation"
+							type="xs:string"
+							minOccurs="0"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="InvoiceRow">
+				<xs:sequence>
+					<xs:element name="ContractRef"
+							type="tns:Reference"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="DopsRef"
+							type="tns:Reference"
+							minOccurs="0"/>
+					<xs:element name="AccountRow"
+							type="tns:Flat20_2"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="Item">
+				<xs:sequence>
+					<xs:element name="RowNumber"
+							type="xs:integer"/>
+					<xs:element name="Value"
+							type="tns:ValueItemType"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="ValueRef"
+							type="tns:Reference"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="ValueContactInfo"
+							type="tns:ContactInfo"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="ValueContragent"
+							type="tns:Contragent"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="ValueDocument"
+							type="tns:Document"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="ValueBANK"
+							type="tns:BANK"
+							nillable="true"
+							minOccurs="0"/>
+				</xs:sequence>
+				<xs:attribute name="ID_Item"
+						type="tns:String36"
+						use="required"/>
+				<xs:attribute name="Name_Item"
+						type="xs:string"
+						use="required"/>
+				<xs:attribute name="TypeValue"
+						type="tns:TypesValue"
+						use="required"/>
+			</xs:complexType>
+			<xs:complexType name="ListOfParameter">
+				<xs:sequence>
+					<xs:element name="Parameter"
+							type="tns:Parameter"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="Loss">
+				<xs:sequence>
+					<xs:element name="ID_Loss"
+							type="tns:String36"
+							nillable="true"/>
+					<xs:element name="LossCurrencyCode"
+							type="tns:String3"/>
+					<xs:element name="ID_Contract"
+							type="tns:String36"
+							nillable="true"/>
+					<xs:element name="Status"
+							type="xs:boolean"/>
+					<xs:element name="SectionLossItemsList"
+							type="tns:Section"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="ContragentList"
+							type="tns:ContragentItem"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="ObjectList"
+							type="tns:LossObject"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="LossPayout"
+							type="tns:Flat20_2"
+							nillable="true"/>
+					<xs:element name="LossPayoutRub"
+							type="tns:Flat20_2"
+							nillable="true"/>
+					<xs:element name="LossStatusList"
+							type="tns:LossStatusItem"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="LossAlert"
+							type="xs:ID"
+							nillable="true"/>
+					<xs:element name="LossAmount"
+							type="tns:Flat20_2"
+							nillable="true"/>
+					<xs:element name="LossAmountRub"
+							type="tns:Flat20_2"
+							nillable="true"/>
+					<xs:element name="LossCorrectionAmount"
+							type="tns:Flat20_2"
+							nillable="true"/>
+					<xs:element name="LossCorrectionAmountRub"
+							type="tns:Flat20_2"
+							nillable="true"/>
+					<xs:element name="LossFailure"
+							type="tns:Flat20_2"
+							nillable="true"/>
+					<xs:element name="LossFailureRub"
+							type="tns:Flat20_2"
+							nillable="true"/>
+				</xs:sequence>
+				<xs:attribute name="DateLoss"
+						type="xs:dateTime"
+						use="required"/>
+				<xs:attribute name="LossIncidentDate"
+						type="xs:dateTime"
+						use="required"/>
+				<xs:attribute name="NumberLoss"
+						use="required">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+			</xs:complexType>
+			<xs:complexType name="LossAlert">
+				<xs:sequence>
+					<xs:element name="ID"
+							type="tns:String36"/>
+					<xs:element name="ID_Contract"
+							type="tns:String36"
+							nillable="true"/>
+					<xs:element name="ContactTel"
+							type="xs:string"/>
+					<xs:element name="DamageDescr"
+							type="xs:string"/>
+					<xs:element name="ContentEvent"
+							type="xs:string"/>
+					<xs:element name="LossEvent"
+							type="tns:Reference"
+							nillable="true"/>
+				</xs:sequence>
+				<xs:attribute name="Date"
+						type="xs:dateTime"
+						use="required"/>
+				<xs:attribute name="Number"
+						type="tns:String50"
+						use="required"/>
+				<xs:attribute name="InputData"
+						type="xs:dateTime"
+						use="required"/>
+				<xs:attribute name="InputNumber"
+						type="tns:String50"
+						use="required"/>
+				<xs:attribute name="LossIncidentDate"
+						type="xs:dateTime"
+						use="required"/>
+			</xs:complexType>
+			<xs:complexType name="LossInsured">
+				<xs:sequence>
+					<xs:element name="ID_LossInsured"
+							type="tns:String36"
+							nillable="true"/>
+					<xs:element name="LPU"
+							type="tns:Reference"
+							nillable="true"/>
+					<xs:element name="Form_of_treatment"
+							type="tns:Reference"
+							nillable="true"/>
+					<xs:element name="ID_Loss"
+							type="tns:String36"
+							nillable="true"/>
+					<xs:element name="ID_Contract"
+							type="tns:String36"
+							nillable="true"/>
+					<xs:element name="ID_Policy"
+							type="tns:String50"
+							nillable="true"/>
+					<xs:element name="Service_LPU"
+							type="tns:Reference"
+							nillable="true"/>
+					<xs:element name="Summ"
+							type="tns:Flat20_2"
+							nillable="true"/>
+					<xs:element name="Count"
+							type="xs:int"
+							nillable="true"/>
+					<xs:element name="MKB10"
+							type="tns:Reference"
+							nillable="true"/>
+					<xs:element name="CurrencyCode"
+							type="tns:String3"
+							nillable="true"/>
+					<xs:element name="Type_of_assistance"
+							type="tns:Reference"
+							nillable="true"/>
+					<xs:element name="SectionLossInsuredtemsList"
+							type="tns:Section"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="SummCoPayments"
+							type="tns:Flat20_2"
+							nillable="true"/>
+				</xs:sequence>
+				<xs:attribute name="BeginDate"
+						type="xs:dateTime"
+						use="required"/>
+				<xs:attribute name="EndDate"
+						type="xs:dateTime"
+						use="required"/>
+			</xs:complexType>
+			<xs:complexType name="LossObject">
+				<xs:sequence>
+					<xs:element name="ID_Object"
+							type="tns:String36"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="ID_ObjectType"
+							type="tns:String36"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="Name_ObjectType"
+							type="tns:String150"
+							nillable="true"/>
+					<xs:element name="SectionObjectItemsList"
+							type="tns:Section"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="RiskList"
+							type="tns:LossRisk"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="LossRisk">
+				<xs:sequence>
+					<xs:element name="Risk"
+							type="tns:Reference"/>
+					<xs:element name="LossPayout"
+							type="tns:Flat20_2"
+							nillable="true"/>
+					<xs:element name="LossPayoutRub"
+							type="tns:Flat20_2"
+							nillable="true"/>
+					<xs:element name="LossAmount"
+							type="tns:Flat20_2"
+							nillable="true"/>
+					<xs:element name="LossAmountRub"
+							type="tns:Flat20_2"
+							nillable="true"/>
+					<xs:element name="LossCorrectionAmount"
+							type="tns:Flat20_2"
+							nillable="true"/>
+					<xs:element name="LossCorrectionAmountRub"
+							type="tns:Flat20_2"
+							nillable="true"/>
+					<xs:element name="LossFailure"
+							type="tns:Flat20_2"
+							nillable="true"/>
+					<xs:element name="LossFailureRub"
+							type="tns:Flat20_2"
+							nillable="true"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="LossStatusItem">
+				<xs:sequence>
+					<xs:element name="period"
+							type="xs:dateTime"/>
+					<xs:element name="Status"
+							type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="LossStatusList">
+				<xs:sequence>
+					<xs:element name="LossStatusItem"
+							type="tns:LossStatusItem"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="MarketingAction">
+				<xs:sequence>
+					<xs:element name="ID_MarketingAction"
+							type="tns:String36"/>
+					<xs:element name="Name_MarketingAction"
+							type="tns:String150"/>
+					<xs:element name="Coefficient"
+							type="tns:Flat5_2_NoNegative"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="Message">
+				<xs:sequence>
+					<xs:element name="MessageType"
+							type="xs:int"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="MessageCode"
+							type="xs:integer"
+							minOccurs="0"/>
+					<xs:element name="MessageText"
+							type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="MessageList">
+				<xs:sequence>
+					<xs:element name="Message"
+							type="tns:Message"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="NumberList">
+				<xs:sequence>
+					<xs:element name="Number"
+							type="tns:String50"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="Object">
+				<xs:sequence>
+					<xs:element name="ID_Object"
+							type="tns:String36"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="ID_ObjectType"
+							type="tns:String36"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="Name_ObjectType"
+							type="tns:String150"/>
+					<xs:element name="RiskList"
+							type="tns:RiskItem"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="SectionObjectItemsList"
+							type="tns:Section"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="InsValue"
+							type="tns:Flat20_2"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="Parameter">
+				<xs:sequence>
+					<xs:element name="Name"
+							type="xs:string"/>
+					<xs:element name="Value"
+							type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="PayOnContract">
+				<xs:sequence>
+					<xs:element name="Number"
+							type="tns:String25"
+							nillable="true"/>
+					<xs:element name="Amount"
+							type="tns:Flat20_2"/>
+					<xs:element name="ID_Contract"
+							type="tns:String36"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="ID_Transaction"
+							type="tns:String36"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="docType"
+							type="tns:String2"
+							nillable="true"/>
+					<xs:element name="Reason"
+							type="tns:String500"
+							nillable="true"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="PayOnContractList">
+				<xs:sequence>
+					<xs:element name="PayOnContract"
+							type="tns:PayOnContract"
+							maxOccurs="unbounded"/>
+					<xs:element name="intNum"
+							type="tns:String2"
+							nillable="true"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="Person">
+				<xs:sequence>
+					<xs:element name="LastName"
+							type="tns:String150"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="FirstName"
+							type="tns:String150"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="MiddleName"
+							type="tns:String150"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="BirthDay"
+							type="xs:date"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="Sex"
+							nillable="true"
+							minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="М"/>
+								<xs:enumeration value="Ж"/>
+								<xs:enumeration value="МУЖ"/>
+								<xs:enumeration value="ЖЕН"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="PersonSB">
+				<xs:sequence>
+					<xs:element name="MainInfo"
+							type="tns:Person"
+							minOccurs="0"/>
+					<xs:element name="MobileTel"
+							type="tns:String100"
+							nillable="true"/>
+					<xs:element name="EMail"
+							type="tns:String100"
+							nillable="true"/>
+					<xs:element name="Adress"
+							type="tns:String150"
+							nillable="true"/>
+					<xs:element name="Document"
+							type="tns:Document"
+							minOccurs="0"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="Policy">
+				<xs:sequence>
+					<xs:element name="Number"
+							type="tns:String100"
+							nillable="true"/>
+					<xs:element name="LastName"
+							type="tns:String100"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="FirstName"
+							type="tns:String100"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="MiddleName"
+							type="tns:String100"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="Birthdate"
+							type="xs:date"
+							nillable="true"/>
+					<xs:element name="BeginDate"
+							type="xs:date"
+							nillable="true"/>
+					<xs:element name="EndDate"
+							type="xs:date"
+							nillable="true"/>
+					<xs:element name="ID_Polis"
+							type="tns:String50"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="ID_Contract"
+							type="tns:String50"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="InsAmount"
+							type="tns:Flat20_2"
+							nillable="true"/>
+					<xs:element name="InsLimit"
+							type="tns:Flat20_2"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="InsPremium"
+							type="tns:Flat20_2"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="PolicyServices"
+							type="tns:PolicyService"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="SectionItemsList"
+							type="tns:Section"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="TravelIns"
+							type="xs:boolean"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="Sex"
+							nillable="true"
+							minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="1"/>
+								<xs:enumeration value="М"/>
+								<xs:enumeration value="Ж"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="EnableCard"
+							type="xs:boolean"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="FamilyPolicyIDList"
+							type="tns:FamilyPolicyID_Item"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="VIP"
+							type="tns:String10"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="PolicySB">
+				<xs:complexContent>
+					<xs:extension base="tns:Policy">
+						<xs:sequence>
+							<xs:element name="TableNumber"
+									type="xs:string"/>
+							<xs:element name="DegreeOfRelationship"
+									type="xs:string"
+									nillable="true"
+									minOccurs="0"/>
+							<xs:element name="TerritorialBank"
+									type="tns:String150"
+									nillable="true"
+									minOccurs="0"/>
+							<xs:element name="City"
+									type="xs:string"
+									nillable="true"
+									minOccurs="0"/>
+							<xs:element name="BeginExperienceInSB"
+									type="xs:dateTime"
+									nillable="true"
+									minOccurs="0"/>
+							<xs:element name="RankSB"
+									type="tns:String50"
+									nillable="true"
+									minOccurs="0"/>
+							<xs:element name="PolicyServicesSB"
+									type="tns:PolicyServiceSB"
+									minOccurs="0"
+									maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="PolicyService">
+				<xs:sequence>
+					<xs:element name="LPU_Name"
+							type="tns:String150"
+							nillable="true"/>
+					<xs:element name="LPU_ID"
+							type="tns:String36"
+							nillable="true"/>
+					<xs:element name="Treatment_ID"
+							type="tns:String36"
+							nillable="true"/>
+					<xs:element name="Treatment_Name"
+							type="tns:String150"
+							nillable="true"/>
+					<xs:element name="BeginDate"
+							type="xs:date"
+							nillable="true"/>
+					<xs:element name="EndDate"
+							type="xs:date"
+							nillable="true"/>
+					<xs:element name="DirectAttachment"
+							type="xs:boolean"/>
+					<xs:element name="NotDirectAttachment"
+							type="xs:boolean"/>
+					<xs:element name="Rating"
+							type="xs:float"
+							minOccurs="0"/>
+					<xs:element name="Program_ID"
+							type="tns:String36"
+							nillable="true"/>
+					<xs:element name="NumberLayer"
+							type="xs:int"
+							nillable="true"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="PolicyServiceSB">
+				<xs:complexContent>
+					<xs:extension base="tns:PolicyService">
+						<xs:sequence>
+							<xs:element name="Level"
+									type="xs:string"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="ProgrammService">
+				<xs:sequence>
+					<xs:element name="LPU_Name"
+							type="tns:String150"
+							nillable="true"/>
+					<xs:element name="LPU_ID"
+							type="tns:String36"
+							nillable="true"/>
+					<xs:element name="Treatment_ID"
+							type="tns:String36"
+							nillable="true"/>
+					<xs:element name="Treatment_Name"
+							type="tns:String150"
+							nillable="true"/>
+					<xs:element name="BeginDate"
+							type="xs:date"
+							nillable="true"/>
+					<xs:element name="EndDate"
+							type="xs:date"
+							nillable="true"/>
+					<xs:element name="DirectAttachment"
+							type="xs:boolean"/>
+					<xs:element name="NotDirectAttachment"
+							type="xs:boolean"/>
+					<xs:element name="Rating"
+							type="xs:float"
+							minOccurs="0"/>
+					<xs:element name="Program_ID"
+							type="tns:String36"
+							nillable="true"/>
+					<xs:element name="NumberLayer"
+							type="xs:int"
+							nillable="true"/>
+					<xs:element name="PercentCopayment"
+							type="tns:Flat20_2"/>
+					<xs:element name="OutLK"
+							type="xs:int"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="Reference">
+				<xs:sequence>
+					<xs:element name="ID"
+							type="tns:String36"/>
+					<xs:element name="Name"
+							type="tns:String150"/>
+					<xs:element name="Parent_ID"
+							type="tns:String36"
+							nillable="true"
+							minOccurs="0"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ReferenceList">
+				<xs:sequence>
+					<xs:element name="Reference"
+							type="tns:Reference"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="Request">
+				<xs:sequence>
+					<xs:element name="RequestID"
+							type="tns:String36"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="RequestType"
+							type="xs:string"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="RequestBody"
+							type="xs:string"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="RequestRezult"
+							type="xs:string"
+							nillable="true"
+							minOccurs="0"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="RequestList">
+				<xs:sequence>
+					<xs:element name="Request"
+							type="tns:Request"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="RequestOnDMS">
+				<xs:sequence>
+					<xs:element name="Type">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="Докупка уровня"/>
+								<xs:enumeration value="Докупка стоматологии"/>
+								<xs:enumeration value="Докупка чекапа"/>
+								<xs:enumeration value="Запрос на АС"/>
+								<xs:enumeration value="Сооплата_до_1_года_Сотрудник"/>
+								<xs:enumeration value="Сооплата_до_1_года_Родственник"/>
+								<xs:enumeration value="Сооплата_после_1_года_Сотрудник"/>
+								<xs:enumeration value="Сооплата_после_1_года_Родственник"/>
+								<xs:enumeration value="Докупка_клиники_Родственник"/>
+								<xs:enumeration value="Стоматология_фикс_Сотрудник"/>
+								<xs:enumeration value="Стоматология_фикс_Родственник"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="ID_Request"
+							type="tns:String36"/>
+					<xs:element name="Date_Request"
+							type="xs:dateTime"
+							nillable="true"/>
+					<xs:element name="TableNumber"
+							type="xs:string"/>
+					<xs:element name="TerritorialBank"
+							type="tns:String150"/>
+					<xs:element name="City"
+							type="xs:string"/>
+					<xs:element name="PrefixOrg"
+							type="tns:String3"
+							minOccurs="0"/>
+					<xs:element name="IsRelative"
+							type="xs:boolean"/>
+					<xs:element name="Insurer"
+							type="tns:PersonSB"/>
+					<xs:element name="Insured"
+							type="tns:PersonSB"
+							minOccurs="0"/>
+					<xs:element name="DegreeOfRelationship"
+							type="tns:String50"
+							nillable="true"/>
+					<xs:element name="ChildrenDepartment"
+							type="tns:String50"
+							nillable="true"/>
+					<xs:element name="BaseLPU_List"
+							type="tns:ReferenceList"
+							minOccurs="0"/>
+					<xs:element name="ExtendedLPU_List"
+							type="tns:ReferenceList"
+							minOccurs="0"/>
+					<xs:element name="TypeCheckUp"
+							type="tns:String50"
+							nillable="true"/>
+					<xs:element name="Destination"
+							type="tns:String500"
+							nillable="true"/>
+					<xs:element name="AddDestination"
+							type="tns:String500"
+							nillable="true"/>
+					<xs:element name="Amount"
+							type="tns:Flat20_2"/>
+					<xs:element name="AmountDeposit"
+							type="tns:Flat20_2"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="RequestOnPrintFormPolicy">
+				<xs:sequence>
+					<xs:element name="Number_Policy"
+							type="tns:String100"/>
+					<xs:element name="ID_Policy"
+							type="tns:String50"/>
+					<xs:element name="TypePrintForm"
+							type="tns:TypePrintFormPolicy"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="RequestOnStatusBSO">
+				<xs:sequence>
+					<xs:element name="BSO"
+							type="tns:BSO_Item"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="RequestUpdate">
+				<xs:sequence>
+					<xs:element name="UpdatePolice"
+							type="tns:UpdatePolice"
+							minOccurs="0"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="RequestUpdateContactInfo">
+				<xs:sequence>
+					<xs:element name="UpdatePoliceContactInfo"
+							type="tns:UpdatePoliceContactInfo"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultCheckDocument">
+				<xs:sequence>
+					<xs:element name="Rezult"
+							type="xs:boolean"/>
+					<xs:element name="MessageList"
+							type="tns:Message"
+							nillable="true"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="CheckDocumentList"
+							type="tns:Message"
+							nillable="true"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultCreatePrintFormAndSend">
+				<xs:sequence>
+					<xs:element name="ID"
+							type="tns:String50"/>
+					<xs:element name="Rezult"
+							type="xs:boolean"/>
+					<xs:element name="MessageList"
+							type="tns:Message"
+							nillable="true"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultCreatePrintFormAndSendList">
+				<xs:sequence>
+					<xs:element name="ResultCreatePrintFormAndSend"
+							type="tns:ResultCreatePrintFormAndSend"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultFindContract">
+				<xs:sequence>
+					<xs:element name="Number_Contract"
+							type="tns:String36"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="Contract"
+							type="tns:Contract"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="Rezult"
+							type="xs:boolean"/>
+					<xs:element name="MessageList"
+							type="tns:Message"
+							nillable="true"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="Agreement"
+							type="tns:AgreementOfContract"
+							nillable="true"
+							minOccurs="0"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultFindContracts">
+				<xs:sequence>
+					<xs:element name="ResultFindContract"
+							type="tns:ResultFindContract"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultGetContract">
+				<xs:sequence>
+					<xs:element name="ID_Contract"
+							type="tns:String36"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="Contract"
+							type="tns:Contract"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="Rezult"
+							type="xs:boolean"/>
+					<xs:element name="MessageList"
+							type="tns:Message"
+							nillable="true"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="Agreement"
+							type="tns:AgreementOfContract"
+							nillable="true"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultGetContractList">
+				<xs:sequence>
+					<xs:element name="ResultGetContract"
+							type="tns:ResultGetContract"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultGetInvoice">
+				<xs:sequence>
+					<xs:element name="MessageList"
+							type="tns:Message"
+							nillable="true"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="Rezult"
+							type="xs:boolean"/>
+					<xs:element name="Invoice"
+							type="tns:Invoice"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="ID_Invoice"
+							type="tns:String36"
+							minOccurs="0"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultGetInvoiceList">
+				<xs:sequence>
+					<xs:element name="ResultGetInvoice"
+							type="tns:ResultGetInvoice"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultGetLoss">
+				<xs:sequence>
+					<xs:element name="ID_Loss"
+							type="tns:String36"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="Loss"
+							type="tns:Loss"/>
+					<xs:element name="Rezult"
+							type="xs:boolean"/>
+					<xs:element name="MessageList"
+							type="tns:Message"
+							nillable="true"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultGetLossList">
+				<xs:sequence>
+					<xs:element name="ResultGetLoss"
+							type="tns:ResultGetLoss"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultGetRequests">
+				<xs:sequence>
+					<xs:element name="RequestList"
+							type="tns:Request"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="ResultItem"
+							type="tns:ResultItem"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultItem">
+				<xs:sequence>
+					<xs:element name="MessageList"
+							type="tns:Message"
+							nillable="true"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="Rezult"
+							type="xs:boolean"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultPayOnContract">
+				<xs:sequence>
+					<xs:element name="PayOnContract"
+							type="tns:PayOnContract"/>
+					<xs:element name="MessageList"
+							type="tns:Message"
+							nillable="true"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultPayOnContractList">
+				<xs:sequence>
+					<xs:element name="ResultPayOnContract"
+							type="tns:ResultPayOnContract"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="Rezult"
+							type="xs:boolean"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultPutContract">
+				<xs:sequence>
+					<xs:element name="ID_Contract"
+							type="tns:String36"
+							minOccurs="0"/>
+					<xs:element name="Rezult"
+							type="xs:boolean"/>
+					<xs:element name="MessageList"
+							type="tns:Message"
+							nillable="true"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="DataList"
+							type="tns:Data_Item"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="ID_ContractIntegation"
+							type="tns:String36"
+							minOccurs="0"/>
+					<xs:element name="RezultSectionContractItemsList"
+							type="tns:Section"
+							nillable="true"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultPutContractList">
+				<xs:sequence>
+					<xs:element name="ResultPutContract"
+							type="tns:ResultPutContract"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultPutContractsInvoice">
+				<xs:sequence>
+					<xs:element name="ResultPutContract"
+							type="tns:ResultPutContract"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="InvoiceNumber"
+							type="xs:string"
+							minOccurs="0"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultSetRequest">
+				<xs:sequence>
+					<xs:element name="MessageList"
+							type="tns:Message"
+							nillable="true"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="Rezult"
+							type="xs:boolean"/>
+					<xs:element name="ID_Request"
+							type="tns:String36"
+							nillable="true"
+							minOccurs="0"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultUpdateExchangeStatus">
+				<xs:sequence>
+					<xs:element name="ID"
+							type="tns:String36"
+							minOccurs="0"/>
+					<xs:element name="Rezult"
+							type="xs:boolean"/>
+					<xs:element name="MessageList"
+							type="tns:Message"
+							nillable="true"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultUpdateExchangeStatusList">
+				<xs:sequence>
+					<xs:element name="ResultUpdateExchangeStatus"
+							type="tns:ResultUpdateExchangeStatus"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResulyCheckRequest">
+				<xs:sequence>
+					<xs:element name="Status"
+							type="tns:request_status"/>
+					<xs:element name="ResultType"
+							type="xs:string"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="ResultBody"
+							type="xs:string"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="MessageList"
+							type="tns:Message"
+							nillable="true"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="RezultAuthorization">
+				<xs:sequence>
+					<xs:element name="Rezult"
+							type="xs:boolean"/>
+					<xs:element name="ID_AccountList"
+							type="tns:ID_List"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="Message"
+							type="tns:Message"
+							nillable="true"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="ID_Auth"
+							type="tns:String50"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="RezultAuthorizationRouting">
+				<xs:sequence>
+					<xs:element name="Rezult"
+							type="xs:boolean"/>
+					<xs:element name="Message"
+							type="tns:Message"
+							nillable="true"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="RezultContractAndLossList">
+				<xs:sequence>
+					<xs:element name="Contract"
+							type="tns:Contract"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="Loss"
+							type="tns:Loss"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="Rezult"
+							type="xs:boolean"/>
+					<xs:element name="MessageList"
+							type="tns:Message"
+							nillable="true"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="RezultInsProgrammDetails">
+				<xs:sequence>
+					<xs:element name="ProgrammList"
+							type="tns:InsProgramm"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="MessageList"
+							type="tns:Message"
+							nillable="true"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="Rezult"
+							type="xs:boolean"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="RezultPolicyList">
+				<xs:sequence>
+					<xs:element name="PolicyList"
+							type="tns:Policy"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="Rezult"
+							type="xs:boolean"/>
+					<xs:element name="MessageList"
+							type="tns:Message"
+							nillable="true"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="RezultPolicySBList">
+				<xs:sequence>
+					<xs:element name="PolicyList"
+							type="tns:PolicySB"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="Rezult"
+							type="xs:boolean"/>
+					<xs:element name="MessageList"
+							type="tns:Message"
+							nillable="true"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="RezultRequestSBOnDMS">
+				<xs:complexContent>
+					<xs:extension base="tns:ResultItem">
+						<xs:sequence>
+							<xs:element name="ID"/>
+							<xs:element name="Status"
+									type="xs:string"
+									nillable="true"/>
+							<xs:element name="DateStatus"
+									type="xs:dateTime"
+									nillable="true"/>
+							<xs:element name="Type"
+									type="xs:string"
+									nillable="true"/>
+							<xs:element name="TableNumber"
+									type="xs:string"
+									nillable="true"/>
+							<xs:element name="Comment"
+									type="xs:string"/>
+							<xs:element name="URL_acquiring"
+									type="xs:string"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="RezultRequestSBOnDMSList">
+				<xs:sequence>
+					<xs:element name="RezultRequestSBOnDMS"
+							type="tns:RezultRequestSBOnDMS"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="RiskItem">
+				<xs:sequence>
+					<xs:element name="RiskName"
+							type="tns:String150"/>
+					<xs:element name="InsAmount"
+							type="tns:Flat20_2"/>
+					<xs:element name="InsPremium"
+							type="tns:Flat20_2"/>
+					<xs:element name="InsCommission"
+							type="tns:Flat20_2"/>
+					<xs:element name="InsLimit"
+							type="tns:Flat20_2"
+							minOccurs="0"/>
+					<xs:element name="BeginDate"
+							type="xs:dateTime"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="EndDate"
+							type="xs:date"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="CoefficientList"
+							type="tns:Coefficient"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="ID_Franchise"
+							type="tns:String36"/>
+					<xs:element name="Name_Franchise"
+							type="tns:String150"/>
+					<xs:element name="FranchiseSumm"
+							type="tns:Flat20_2"/>
+					<xs:element name="InsAmountAggregate"
+							type="xs:boolean"/>
+					<xs:element name="BasicRiskName"
+							type="tns:String150"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="SectionRiskItemsList"
+							type="tns:Section"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="ID_TariffRateOption"
+							type="tns:String36"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="Name_TariffRateOption"
+							type="tns:String150"
+							nillable="true"
+							minOccurs="0"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="RoleItem">
+				<xs:sequence>
+					<xs:element name="ID_Role"
+							type="tns:String36"/>
+					<xs:element name="Name_Role"
+							type="tns:String150"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ScheduleOfPaymentItem">
+				<xs:sequence>
+					<xs:element name="DateOfPayment"
+							type="xs:date"/>
+					<xs:element name="Deadline"
+							type="xs:date"/>
+					<xs:element name="Summ"
+							type="tns:Flat20_2"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="Section">
+				<xs:sequence>
+					<xs:element name="ItemList"
+							type="tns:Item"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+				<xs:attribute name="SectionName"
+						type="tns:String100"
+						use="required"/>
+			</xs:complexType>
+			<xs:simpleType name="String10">
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="10"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType name="String100">
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="100"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType name="String13">
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="13"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType name="String150">
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="150"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType name="String152">
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="152"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType name="String163">
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="163"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType name="String2">
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="2"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType name="String20">
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="20"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType name="String23">
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="23"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType name="String25">
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="25"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType name="String3">
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="3"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType name="String30">
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="30"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType name="String36">
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="36"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType name="String50">
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="50"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType name="String500">
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="500"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType name="String8">
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="8"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType name="TypePrintFormPolicy">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="ДМС"/>
+					<xs:enumeration value="ВПМЖ"/>
+					<xs:enumeration value="ЕПолис"/>
+					<xs:enumeration value="ПрограммаДМС"/>
+					<xs:enumeration value="ВПМЖ_СБ"/>
+					<xs:enumeration value="ВПМЖ_Дог"/>
+					<xs:enumeration value="ВПМЖ_КОРП"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType name="TypesDate">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="ДатаЗаключения"/>
+					<xs:enumeration value="ДатаНачалаОтветсвенности"/>
+					<xs:enumeration value="ДатаПолучения"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType name="TypesValue">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="Число"/>
+					<xs:enumeration value="Строка"/>
+					<xs:enumeration value="Дата"/>
+					<xs:enumeration value="Булево"/>
+					<xs:enumeration value="Ссылка"/>
+					<xs:enumeration value="Адрес"/>
+					<xs:enumeration value="Контрагент"/>
+					<xs:enumeration value="Документ"/>
+					<xs:enumeration value="Банк"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:complexType name="UpdatePolice">
+				<xs:sequence>
+					<xs:element name="ContactPhone"
+							nillable="true">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="70"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="WorkPhone"
+							nillable="true">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="70"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+				</xs:sequence>
+				<xs:attribute name="LastNameLat"
+						type="tns:String150"/>
+				<xs:attribute name="FirstNameLat"
+						type="tns:String150"/>
+				<xs:attribute name="MiddleNameLat"
+						type="tns:String150"/>
+				<xs:attribute name="EMail"
+						type="tns:String150"/>
+			</xs:complexType>
+			<xs:complexType name="UpdatePoliceContactInfo">
+				<xs:sequence>
+					<xs:element name="MobilePhone"
+							nillable="true">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="70"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="ContactPhone"
+							nillable="true">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="70"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="WorkPhone"
+							nillable="true">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="70"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="RegistrationAddress"
+							type="tns:ContactInfo"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="ResidentialAddress"
+							type="tns:ContactInfo"
+							nillable="true"
+							minOccurs="0"/>
+				</xs:sequence>
+				<xs:attribute name="Number_Policy"
+						type="tns:String25"
+						use="required"/>
+				<xs:attribute name="ID_Policy"
+						type="tns:String50"
+						use="required"/>
+				<xs:attribute name="EMail"
+						type="tns:String150"/>
+			</xs:complexType>
+			<xs:simpleType name="ValueItemType">
+				<xs:union memberTypes="tns:String500 xs:dateTime xs:boolean tns:Flat30_5"/>
+			</xs:simpleType>
+			<xs:simpleType name="compartype">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="равно"/>
+					<xs:enumeration value="не равно"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:complexType name="detail">
+				<xs:sequence>
+					<xs:element name="name"
+							type="xs:string"/>
+					<xs:element name="value"
+							type="xs:string"/>
+					<xs:element name="type"
+							type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="getrequest">
+				<xs:sequence>
+					<xs:element name="type"
+							type="xs:string"/>
+					<xs:element name="detail"
+							type="xs:string"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="select"
+							type="tns:select"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="number"
+							type="xs:string"
+							minOccurs="0"/>
+					<xs:element name="prevguid"
+							type="xs:string"
+							minOccurs="0"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="object">
+				<xs:sequence>
+					<xs:element name="guid"
+							type="xs:string"/>
+					<xs:element name="detail"
+							type="tns:detail"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="table"
+							type="tns:table"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="objectlist">
+				<xs:sequence>
+					<xs:element name="object"
+							type="tns:object"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="Error"
+							type="xs:string"
+							minOccurs="0"/>
+					<xs:element name="lastguid"
+							type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:simpleType name="request_status">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="wait"/>
+					<xs:enumeration value="not found"/>
+					<xs:enumeration value="ready"/>
+					<xs:enumeration value="error"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:complexType name="row">
+				<xs:sequence>
+					<xs:element name="detail"
+							type="tns:detail"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="select">
+				<xs:sequence>
+					<xs:element name="union"
+							type="tns:uniontype"/>
+					<xs:element name="name"
+							type="xs:string"/>
+					<xs:element name="compar"
+							type="tns:compartype"/>
+					<xs:element name="type"
+							type="xs:string"/>
+					<xs:element name="value"
+							type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="table">
+				<xs:sequence>
+					<xs:element name="name"
+							type="xs:string"/>
+					<xs:element name="row"
+							type="tns:row"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:simpleType name="uniontype">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="И"/>
+					<xs:enumeration value="ИЛИ"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:schema>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+				xmlns:xs1="http://www.calc.sogaz.ru"
+				xmlns:xs2="http://www.integrator.sogaz.ru"
+				xmlns:xs3="http://www.perconalcabinet.sogaz.ru"
+				targetNamespace="http://www.perconalcabinet.sogaz.ru"
+				attributeFormDefault="unqualified"
+				elementFormDefault="qualified">
+			<xs:import namespace="http://www.integrator.sogaz.ru"/>
+			<xs:import namespace="http://www.calc.sogaz.ru"/>
+			<xs:complexType name="AgreementOfContract">
+				<xs:sequence>
+					<xs:element name="ID_Dog"
+							type="xs2:String36"/>
+					<xs:element name="ID_Doc"
+							type="xs2:String36"/>
+					<xs:element name="Number"
+							type="xs2:String100"/>
+					<xs:element name="DateOfContract"
+							type="xs:dateTime"/>
+					<xs:element name="DateBegin"
+							type="xs:dateTime"/>
+					<xs:element name="DateOfSigning"
+							type="xs:dateTime"/>
+					<xs:element name="Status"
+							type="xs2:String100"/>
+					<xs:element name="Responsible"
+							type="xs2:String150"/>
+					<xs:element name="Summ"
+							type="xs:float"/>
+					<xs:element name="SummRub"
+							type="xs:float"/>
+					<xs:element name="ID_StatusProv"
+							type="xs2:String36"/>
+					<xs:element name="StatusProv"
+							type="xs2:String150"/>
+					<xs:element name="ID_StatusDoc"
+							type="xs2:String36"/>
+					<xs:element name="StatusDoc"
+							type="xs2:String150"/>
+					<xs:element name="TypeOperation"
+							type="xs2:String100"/>
+					<xs:element name="Message"
+							type="xs2:String150"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="B2B_Error">
+				<xs:sequence>
+					<xs:element name="Code"
+							type="xs2:String13"/>
+					<xs:element name="Error"
+							type="xs2:String500"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="B2B_ErrorLog">
+				<xs:sequence>
+					<xs:element name="Error"
+							type="tns:B2B_Error"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="B2B_Operation">
+				<xs:sequence>
+					<xs:element name="PolicyList"
+							type="tns:B2B_PolicyList"/>
+					<xs:element name="TypeOperation"
+							type="xs2:String30"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="B2B_OperationList">
+				<xs:sequence>
+					<xs:element name="Operation"
+							type="tns:B2B_Operation"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="B2B_Policy">
+				<xs:sequence>
+					<xs:element name="ID"
+							type="xs2:String36"/>
+					<xs:element name="Number"
+							type="xs2:String50"/>
+					<xs:element name="LastName"
+							type="xs2:String50"/>
+					<xs:element name="FirstName"
+							type="xs2:String50"/>
+					<xs:element name="MiddleName"
+							type="xs2:String50"
+							minOccurs="0"/>
+					<xs:element name="Birthday"
+							type="xs:dateTime"/>
+					<xs:element name="Sex"
+							type="xs2:String20"/>
+					<xs:element name="Address"
+							type="xs2:String150"
+							minOccurs="0"/>
+					<xs:element name="EMail"
+							type="xs2:String100"
+							minOccurs="0"/>
+					<xs:element name="Phone"
+							type="xs2:String50"
+							minOccurs="0"/>
+					<xs:element name="Position"
+							type="xs2:String100"
+							minOccurs="0"/>
+					<xs:element name="Department"
+							type="xs2:String500"
+							minOccurs="0"/>
+					<xs:element name="TabNumber"
+							type="xs2:String50"
+							minOccurs="0"/>
+					<xs:element name="LastNameNew"
+							type="xs2:String50"
+							minOccurs="0"/>
+					<xs:element name="FirstNameNew"
+							type="xs2:String50"
+							minOccurs="0"/>
+					<xs:element name="MiddleNameNew"
+							type="xs2:String50"
+							minOccurs="0"/>
+					<xs:element name="BirthdayNew"
+							type="xs:dateTime"
+							minOccurs="0"/>
+					<xs:element name="SexNew"
+							type="xs2:String20"
+							minOccurs="0"/>
+					<xs:element name="ProgrammList"
+							type="tns:B2B_ProgrammList"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="DateOperation"
+							type="xs:dateTime"/>
+					<xs:element name="DateFinish"
+							type="xs:dateTime"
+							minOccurs="0"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="B2B_PolicyList">
+				<xs:sequence>
+					<xs:element name="Policy"
+							type="tns:B2B_Policy"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="B2B_Programm">
+				<xs:sequence>
+					<xs:element name="ID"
+							type="xs2:String36"/>
+					<xs:element name="Code"
+							type="xs2:String10"
+							minOccurs="0"/>
+					<xs:element name="Name"
+							type="xs2:String100"
+							minOccurs="0"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="B2B_ProgrammList">
+				<xs:sequence>
+					<xs:element name="TypeList"
+							type="xs2:String30"/>
+					<xs:element name="Programm"
+							type="tns:B2B_Programm"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="B2B_Request">
+				<xs:sequence>
+					<xs:element name="ID"
+							type="xs2:String36"/>
+					<xs:element name="Status"
+							type="xs2:String50"/>
+					<xs:element name="DateUpdate"
+							type="xs:dateTime"
+							minOccurs="0"/>
+					<xs:element name="ErrorLog"
+							type="tns:B2B_ErrorLog"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="Message"
+							type="xs2:String150"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ConfigLossInsured">
+				<xs:sequence>
+					<xs:element name="ID_Contract"
+							type="xs2:String36"
+							nillable="true"/>
+					<xs:element name="Form_of_treatment"
+							type="xs:boolean"
+							nillable="true"/>
+					<xs:element name="Service_LPU"
+							type="xs:boolean"
+							nillable="true"/>
+					<xs:element name="Summ"
+							type="xs:boolean"
+							nillable="true"/>
+					<xs:element name="Count"
+							type="xs:boolean"
+							nillable="true"/>
+					<xs:element name="MKB10"
+							type="xs:boolean"
+							nillable="true"/>
+					<xs:element name="CurrencyCode"
+							type="xs:boolean"
+							nillable="true"/>
+					<xs:element name="Type_of_assistance"
+							type="xs:boolean"
+							nillable="true"/>
+					<xs:element name="SummCoPayments"
+							type="xs:boolean"
+							nillable="true"/>
+				</xs:sequence>
+				<xs:attribute name="BeginDate"
+						type="xs:boolean"
+						use="required"/>
+				<xs:attribute name="EndDate"
+						type="xs:boolean"
+						use="required"/>
+			</xs:complexType>
+			<xs:complexType name="CopaymensTransaction">
+				<xs:sequence>
+					<xs:element name="Date"
+							type="xs:dateTime"
+							nillable="true"/>
+					<xs:element name="Summ"
+							type="xs2:Flat20_2"
+							nillable="true"/>
+					<xs:element name="NumberCard"
+							type="xs:string"
+							nillable="true"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="CountInsured">
+				<xs:sequence>
+					<xs:element name="ID_Dog"
+							type="xs2:String36"
+							nillable="true"/>
+					<xs:element name="CountInsured"
+							type="xs:int"
+							nillable="true"/>
+					<xs:element name="Message"
+							type="xs2:String150"
+							nillable="true"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="DataAccount">
+				<xs:sequence>
+					<xs:element name="ID"
+							type="xs2:ID_50"/>
+					<xs:element name="ID_ListDuplicate"
+							type="xs2:ID_List"/>
+					<xs:element name="ManagerList"
+							type="tns:Manager"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="CategoryVIP"
+							type="xs:int"
+							nillable="true"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="GuaranteeLetter">
+				<xs:sequence>
+					<xs:element name="ID_GuaranteeLetter"
+							type="xs2:String36"/>
+					<xs:element name="DateGuaranteeLetter"
+							type="xs:dateTime"/>
+					<xs:element name="NumberGuaranteeLetter"
+							type="xs2:String20"/>
+					<xs:element name="ID_Contragent"
+							type="xs2:String36"/>
+					<xs:element name="ID_Status"
+							type="xs2:String36"/>
+					<xs:element name="TypeOperation"
+							type="xs2:String100"/>
+					<xs:element name="ID_Insured"
+							type="xs2:String36"/>
+					<xs:element name="Message"
+							type="xs2:String150"/>
+					<xs:element name="Result"
+							type="xs:boolean"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="InfoCopaymensPolicy">
+				<xs:sequence>
+					<xs:element name="ID_Policy"
+							type="xs2:String50"
+							nillable="true"/>
+					<xs:element name="ID_Loss"
+							type="xs2:String36"
+							nillable="true"/>
+					<xs:element name="SummCoPayments"
+							type="xs2:Flat20_2"
+							nillable="true"/>
+					<xs:element name="SummCoPaymentsBalance"
+							type="xs2:Flat20_2"
+							nillable="true"/>
+					<xs:element name="CopaymensTransactionList"
+							type="tns:CopaymensTransaction"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="SummCoPaymentsInTransit"
+							type="xs2:Flat20_2"
+							nillable="true"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="InsProgramItem">
+				<xs:sequence>
+					<xs:element name="ID_InsProduct"
+							type="xs2:String36"/>
+					<xs:element name="ID_Ins_Program"
+							type="xs2:String36"/>
+					<xs:element name="NameInsProgram"/>
+					<xs:element name="InsSumm"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="InsProgrammOnDog">
+				<xs:sequence>
+					<xs:element name="ID_Dog"
+							type="xs2:String36"/>
+					<xs:element name="ID_Prog"
+							type="xs2:String36"/>
+					<xs:element name="NameProgramm"
+							type="xs2:String150"/>
+					<xs:element name="BeginDate"
+							type="xs:dateTime"/>
+					<xs:element name="EndDate"
+							type="xs:dateTime"/>
+					<xs:element name="Message"
+							type="xs2:String150"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ItemResultGetContragentList">
+				<xs:sequence>
+					<xs:element name="ID_Contragent"
+							type="xs2:String36"/>
+					<xs:element name="Name_Contragent"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ItemResultGetInsProgFiles">
+				<xs:sequence>
+					<xs:element name="ID_Ins_Program"
+							type="xs2:String36"/>
+					<xs:element name="Data_File_List"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ItemResultGetInsured">
+				<xs:sequence>
+					<xs:element name="ID_Dog"
+							type="xs2:String36"/>
+					<xs:element name="Insurer_Name"/>
+					<xs:element name="ID_CommercialOfferOfDog"
+							type="xs2:String36"
+							nillable="true"/>
+					<xs:element name="ID_ProlongedDog"
+							type="xs2:String36"
+							nillable="true"/>
+					<xs:element name="ID_CommercialOfferOfProlongedDog"
+							type="xs2:String36"
+							nillable="true"/>
+					<xs:element name="PolisApplied"/>
+					<xs:element name="Service_Filial"/>
+					<xs:element name="Number_Dog"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ListOfDataAccount">
+				<xs:sequence>
+					<xs:element name="DataAccount"
+							type="tns:DataAccount"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ListPayment">
+				<xs:sequence>
+					<xs:element name="Payment"
+							type="tns:Payment"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="Manager">
+				<xs:sequence>
+					<xs:element name="LOGIN"
+							type="xs:string"/>
+					<xs:element name="Email"
+							type="xs:string"/>
+					<xs:element name="MobilePHONE"
+							type="xs:string"/>
+					<xs:element name="FIRST_NAME"
+							type="xs:string"/>
+					<xs:element name="LAST_NAME"
+							type="xs:string"/>
+					<xs:element name="MIDDLE_NAME"
+							type="xs:string"/>
+					<xs:element name="EMP_TYPE"
+							type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="PackageItem">
+				<xs:sequence>
+					<xs:element name="LastGuid"
+							type="xs2:String36"/>
+					<xs:element name="End"
+							type="xs:boolean"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="Payment">
+				<xs:sequence>
+					<xs:element name="ID_Contract"
+							type="xs2:String36"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="Date"
+							type="xs:date"/>
+					<xs:element name="CurrencyCode"
+							type="xs2:String3"/>
+					<xs:element name="Summ"
+							type="xs2:Flat20_2"/>
+					<xs:element name="SummRUB"
+							type="xs2:Flat20_2"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="Petition">
+				<xs:sequence>
+					<xs:element name="ID"
+							type="xs2:String36"
+							nillable="true"/>
+					<xs:element name="ID_Loss"
+							type="xs2:String36"
+							nillable="true"/>
+					<xs:element name="RezultPetition"
+							type="xs:string"
+							nillable="true"/>
+					<xs:element name="RezultPetitionFull"
+							type="xs:string"
+							nillable="true"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="PolicyListOnContract">
+				<xs:sequence>
+					<xs:element name="Id_contract"
+							type="xs2:String36"/>
+					<xs:element name="id_polis"
+							type="xs2:String36"/>
+					<xs:element name="Number_polis"
+							type="xs2:String100"/>
+					<xs:element name="Last_Name"
+							type="xs2:String100"/>
+					<xs:element name="First_Name"
+							type="xs2:String100"/>
+					<xs:element name="Middle_Name"
+							type="xs2:String100"/>
+					<xs:element name="Birthday"
+							type="xs:dateTime"/>
+					<xs:element name="Sex"
+							type="xs2:String2"/>
+					<xs:element name="BeginDate"
+							type="xs:dateTime"/>
+					<xs:element name="EndDate"
+							type="xs:dateTime"/>
+					<xs:element name="ProgrammList"
+							type="xs2:InsProgrammItem"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="RequestGetPrintForm">
+				<xs:sequence>
+					<xs:element name="Type"
+							type="tns:TypePrintFormPolicy"/>
+					<xs:element name="ReferenceList"
+							type="xs2:Reference"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="Extention"/>
+					<xs:element name="Signature"
+							type="xs:boolean"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="RequestOnCoPayment">
+				<xs:sequence>
+					<xs:element name="Type">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="Переход"/>
+								<xs:enumeration value="Отказ"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="ID_Policy"
+							type="xs2:String36"/>
+					<xs:element name="NumberPolicy"
+							type="xs2:String50"/>
+					<xs:element name="ID_InsProgram"
+							type="xs2:String36"/>
+					<xs:element name="NumberLayer"
+							type="xs:int"/>
+					<xs:element name="EMail"
+							type="xs2:String100"
+							nillable="true"/>
+					<xs:element name="ID_Request"
+							type="xs2:String50"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultB2BCheck">
+				<xs:sequence>
+					<xs:element name="RequestList"
+							type="tns:B2B_Request"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultB2BRequest">
+				<xs:sequence>
+					<xs:element name="ID_Request"
+							type="xs2:String36"/>
+					<xs:element name="Status"
+							type="xs2:String50"/>
+					<xs:element name="DateUpdate"
+							type="xs:dateTime"/>
+					<xs:element name="ErrorLog"
+							type="tns:B2B_ErrorLog"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultGetAgreementOfContract">
+				<xs:sequence>
+					<xs:element name="AgreementOfContract"
+							type="tns:AgreementOfContract"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="Result"
+							type="xs:boolean"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultGetCommercialOffer">
+				<xs:sequence>
+					<xs:element name="ID_CommersialOffer"
+							type="xs2:String36"/>
+					<xs:element name="ID_InsProductsList"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="InsProgramList"
+							type="tns:InsProgramItem"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultGetContractListPC">
+				<xs:sequence>
+					<xs:element name="ResultGetContract"
+							type="tns:ResultGetContractPC"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultGetContractPC">
+				<xs:sequence>
+					<xs:element name="ID_Contract"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="Contract"
+							nillable="true"
+							minOccurs="0"/>
+					<xs:element name="Rezult"
+							type="xs:boolean"/>
+					<xs:element name="MessageList"
+							nillable="true"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="TotalInsPremiumRub"/>
+					<xs:element name="TotalInsPaymentRub"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultGetContragentList">
+				<xs:sequence>
+					<xs:element name="Contragent"
+							type="xs2:Contragent"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="Result"
+							type="xs:boolean"/>
+					<xs:element name="Message"
+							type="xs2:String150"
+							nillable="true"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultGetCountInsuredOfContracts">
+				<xs:sequence>
+					<xs:element name="CountInsured"
+							type="tns:CountInsured"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="Result"
+							type="xs:boolean"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultGetGuaranteeLetter">
+				<xs:sequence>
+					<xs:element name="GuaranteeLetter"
+							type="tns:GuaranteeLetter"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultGetInfoCopaymensPolicy">
+				<xs:sequence>
+					<xs:element name="InfoCopaymensPolicyList"
+							type="tns:InfoCopaymensPolicy"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="Rezult"
+							type="xs:boolean"/>
+					<xs:element name="MessageList"
+							type="xs2:Message"
+							nillable="true"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultGetInsProgFilesList">
+				<xs:sequence>
+					<xs:element name="Item"
+							type="tns:ItemResultGetInsProgFiles"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultGetInsProgrammOnDog">
+				<xs:sequence>
+					<xs:element name="InsProgrammOnDog"
+							type="tns:InsProgrammOnDog"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="Result"
+							type="xs:boolean"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultGetInsuredList">
+				<xs:sequence>
+					<xs:element name="Item"
+							type="tns:ItemResultGetInsured"
+							nillable="true"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultGetLossAlert">
+				<xs:sequence>
+					<xs:element name="LossAlertList"
+							type="xs2:LossAlert"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="Rezult"
+							type="xs:boolean"/>
+					<xs:element name="MessageList"
+							type="xs2:Message"
+							nillable="true"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultGetLossInsured">
+				<xs:sequence>
+					<xs:element name="LossInsuredList"
+							type="xs2:LossInsured"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="Rezult"
+							type="xs:boolean"/>
+					<xs:element name="MessageList"
+							type="xs2:Message"
+							nillable="true"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="ConfigLossInsuredList"
+							type="tns:ConfigLossInsured"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultGetPetitions">
+				<xs:sequence>
+					<xs:element name="PetitionsList"
+							type="tns:Petition"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="Rezult"
+							type="xs:boolean"/>
+					<xs:element name="MessageList"
+							type="xs2:Message"
+							nillable="true"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultGetProlongationKASKO">
+				<xs:sequence>
+					<xs:element name="ID_Dog"
+							type="xs2:String36"/>
+					<xs:element name="Zapr_Prol"
+							type="xs:boolean"/>
+					<xs:element name="Zapr_NadCl"
+							type="xs:boolean"/>
+					<xs:element name="Coef"
+							type="xs:float"/>
+					<xs:element name="Result"
+							type="xs:boolean"/>
+					<xs:element name="Message"
+							type="xs2:String150"
+							nillable="true"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ResultGetSignKPSRKK">
+				<xs:sequence>
+					<xs:element name="ID_PointOfSale"
+							type="xs2:String36"
+							nillable="true"/>
+					<xs:element name="ID_Contragent"
+							type="xs2:String36"/>
+					<xs:element name="ID_Polis"
+							type="xs2:String36"
+							nillable="true"/>
+					<xs:element name="Message"
+							type="xs2:String150"
+							nillable="true"/>
+					<xs:element name="Rezult"
+							type="xs:boolean"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ReturnGetPolicyListOnContract">
+				<xs:sequence>
+					<xs:element name="Policy"
+							type="xs2:Policy"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="PrevLastID_Policy"
+							type="xs2:String36"
+							minOccurs="0"/>
+					<xs:element name="Result"
+							type="xs:boolean"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="RezultContractAndLossList_v2">
+				<xs:sequence>
+					<xs:element name="Contract"
+							type="xs2:Contract"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="Loss"
+							type="xs2:Loss"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="Rezult"
+							type="xs:boolean"/>
+					<xs:element name="MessageList"
+							type="xs2:Message"
+							nillable="true"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="DataAccount"
+							type="tns:DataAccount"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+					<xs:element name="Package"
+							type="tns:PackageItem"
+							nillable="true"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="RezultRequestListOnCoPayment">
+				<xs:sequence>
+					<xs:element name="RezultRequest"
+							minOccurs="0"
+							maxOccurs="unbounded">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="Request"
+										type="xs2:Request"/>
+								<xs:element name="DateBeginService"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:simpleType name="TypePrintFormPolicy">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="ДМС"/>
+					<xs:enumeration value="ВПМЖ"/>
+					<xs:enumeration value="ЕПолис"/>
+					<xs:enumeration value="ПрограммаДМС"/>
+					<xs:enumeration value="ВПМЖ_СБ"/>
+					<xs:enumeration value="ВПМЖ_Дог"/>
+					<xs:enumeration value="ПолисНС"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:element name="getContractAndLossList">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="InsuredIDList"
+								type="xs2:ID_List"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getContractAndLossListResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs2:RezultContractAndLossList"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getContractsDetails">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ContractIDList"
+								type="xs2:ID_List"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getContractsDetailsResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs2:ResultGetContractList"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getLossDetails">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="LossIDList"
+								type="xs2:ID_List"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getLossDetailsResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs2:ResultGetLossList"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="AuthorizationNewAccount">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ID_Auth"
+								type="xs1:String50"/>
+						<xs:element name="FIO"
+								type="xs:string"/>
+						<xs:element name="NumberDoc"
+								type="xs1:String50"/>
+						<xs:element name="NumberPoliс"
+								type="xs1:String50"/>
+						<xs:element name="SeriesPasport"
+								type="xs:string"
+								nillable="true"/>
+						<xs:element name="NumberPasport"
+								type="xs:string"
+								nillable="true"/>
+						<xs:element name="Phone"
+								type="xs:string"
+								nillable="true"/>
+						<xs:element name="BrithDate"
+								type="xs:date"
+								nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="AuthorizationNewAccountResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs2:RezultAuthorization"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getPolicyList">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="InsuredIDList"
+								type="xs2:ID_List"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getPolicyListResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs2:RezultPolicyList"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getPolicyDetails">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="PolicyIDList"
+								type="xs2:ID_List"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getPolicyDetailsResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs2:RezultPolicyList"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="AuthorizationNewAccountRouting">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Rezult"
+								type="xs:boolean"/>
+						<xs:element name="ID_AccountList"
+								type="xs2:ID_List"/>
+						<xs:element name="MessageList"
+								type="xs2:MessageList"/>
+						<xs:element name="FIO"
+								type="xs:string"/>
+						<xs:element name="NumberDoc"
+								type="xs1:String50"/>
+						<xs:element name="NumberPolic"
+								type="xs1:String50"/>
+						<xs:element name="ID_Auth"
+								type="xs1:String50"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="AuthorizationNewAccountRoutingResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs2:RezultAuthorizationRouting"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getContractsDetails2">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ContractIDList"
+								type="xs2:ID_List"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getContractsDetails2Response">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="tns:ResultGetContractPC"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getInsuredWithPolisApplied">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="SearchDate"
+								type="xs:dateTime"/>
+						<xs:element name="FIO"
+								type="xs2:String152"/>
+						<xs:element name="BirthDate"
+								type="xs:date"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getInsuredWithPolisAppliedResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="tns:ResultGetInsuredList"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getCommercialOffer">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ID_Commercial_Offer"
+								type="xs2:String36"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getCommercialOfferResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="tns:ResultGetCommercialOffer"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getInsProgramFiles">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ID_Ins_Program"
+								type="xs2:ID_List"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getInsProgramFilesResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="tns:ResultGetInsProgFilesList"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getAbilityOfSale">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Polis_Applied"
+								type="xs2:String163"/>
+						<xs:element name="ID_Dog_Prolonged"
+								type="xs2:String36"/>
+						<xs:element name="SearchDateOfBegin"
+								type="xs:date"/>
+						<xs:element name="SearchDateOfEnd"
+								type="xs:date"/>
+						<xs:element name="InsProgramList"
+								type="xs2:ID_List"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getAbilityOfSaleResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:boolean"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getLossInsured">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ID_Policys"
+								type="xs2:ID_List"/>
+						<xs:element name="BeginDate"
+								type="xs:dateTime"/>
+						<xs:element name="EndDate"
+								type="xs:dateTime"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getLossInsuredResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="tns:ResultGetLossInsured"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getPetitions">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ID_LossList"
+								type="xs2:ID_List"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getPetitionsResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="tns:ResultGetPetitions"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getTreatment">
+				<xs:complexType>
+					<xs:sequence/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getTreatmentResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs2:ReferenceList"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getLossAlert">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ContractIDList"
+								type="xs2:ID_List"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getLossAlertResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="tns:ResultGetLossAlert"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="TestContract">
+				<xs:complexType>
+					<xs:sequence/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="TestContractResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:boolean"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getInsProgrammDetails">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ProgrammIDList"
+								type="xs2:ID_List"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getInsProgrammDetailsResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs2:RezultInsProgrammDetails"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="GetInfoCopaymensPolicy">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="PolicyIDList"
+								type="xs2:ID_List"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="GetInfoCopaymensPolicyResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="tns:ResultGetInfoCopaymensPolicy"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="GetPaymentList">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="GUIDDSP"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="GetPaymentListResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="tns:ListPayment"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="GetDataAccount">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="AccountIDList"
+								type="xs2:ID_List"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="GetDataAccountResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="tns:ListOfDataAccount"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getContractAndLossList_v2">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="InsuredIDList"
+								type="xs2:ID_List"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getContractAndLossList_v2Response">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="tns:RezultContractAndLossList_v2"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getSignKPSRKK">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="FIO"
+								type="xs:string"/>
+						<xs:element name="BirthDate"
+								type="xs:date"
+								nillable="true"/>
+						<xs:element name="SeriesPasport"
+								type="xs:string"
+								nillable="true"/>
+						<xs:element name="NumberPasport"
+								type="xs:string"
+								nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getSignKPSRKKResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="tns:ResultGetSignKPSRKK"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="RequestOnCoPayment">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="RequestOnCoPayment"
+								type="tns:RequestOnCoPayment"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="RequestOnCoPaymentResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs2:ResultSetRequest"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="CheckRequestOnCoPayment">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="RequestIDList"
+								type="xs2:ID_List"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="CheckRequestOnCoPaymentResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="tns:RezultRequestListOnCoPayment"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getContragentList">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="INN"
+								type="xs:string"/>
+						<xs:element name="KPP"
+								type="xs:string"
+								nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getContragentListResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="tns:ResultGetContragentList"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getCountInsuredOfContracts">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ID_Dog"
+								type="xs2:ID_List"
+								nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getCountInsuredOfContractsResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="tns:ResultGetCountInsuredOfContracts"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getAgreementOfContract">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ID_Dog"
+								type="xs2:ID_List"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getAgreementOfContractResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="tns:ResultGetAgreementOfContract"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getProlongationKASKO">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ID_Dog"
+								type="xs2:String36"/>
+						<xs:element name="KPSRKK"
+								type="xs:boolean"/>
+						<xs:element name="Date_Dog"
+								type="xs:dateTime"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getProlongationKASKOResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="tns:ResultGetProlongationKASKO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="GetGuaranteeLetter">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ID_list"
+								type="xs2:ID_List"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="GetGuaranteeLetterResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="tns:ResultGetGuaranteeLetter"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="GetPolicyListOnContract">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ID_Contract"
+								type="xs2:String36"/>
+						<xs:element name="SampleSize"
+								type="xs:integer"
+								nillable="true"/>
+						<xs:element name="PrevLastID_Policy"
+								type="xs2:String36"
+								nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="GetPolicyListOnContractResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="tns:ReturnGetPolicyListOnContract"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="SetB2BOrder">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ID_Request"
+								type="xs2:String36"/>
+						<xs:element name="ID_Dog"
+								type="xs2:String36"/>
+						<xs:element name="TypeOrder"
+								type="xs:int"/>
+						<xs:element name="Status"
+								type="xs2:String50"/>
+						<xs:element name="OperationList"
+								type="tns:B2B_OperationList"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="SetB2BOrderResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="tns:ResultB2BRequest"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="CheckB2BOrder">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="RequestList"
+								type="xs2:ID_List"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="CheckB2BOrderResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="tns:ResultB2BCheck"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getInsProgrammOnDog">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ID_List"
+								type="xs2:ID_List"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getInsProgrammOnDogResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="tns:ResultGetInsProgrammOnDog"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getContractAndLossList_v3">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="InsuredIDList"
+								type="xs2:ID_List"/>
+						<xs:element name="Depth"
+								type="xs:integer"/>
+						<xs:element name="LastGUID"
+								type="xs2:String36"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getContractAndLossList_v3Response">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="tns:RezultContractAndLossList_v2"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:schema>
+	</types>
+	<message name="getContractAndLossListRequestMessage">
+		<part name="parameters"
+				element="tns:getContractAndLossList"/>
+	</message>
+	<message name="getContractAndLossListResponseMessage">
+		<part name="parameters"
+				element="tns:getContractAndLossListResponse"/>
+	</message>
+	<message name="getContractsDetailsRequestMessage">
+		<part name="parameters"
+				element="tns:getContractsDetails"/>
+	</message>
+	<message name="getContractsDetailsResponseMessage">
+		<part name="parameters"
+				element="tns:getContractsDetailsResponse"/>
+	</message>
+	<message name="getLossDetailsRequestMessage">
+		<part name="parameters"
+				element="tns:getLossDetails"/>
+	</message>
+	<message name="getLossDetailsResponseMessage">
+		<part name="parameters"
+				element="tns:getLossDetailsResponse"/>
+	</message>
+	<message name="AuthorizationNewAccountRequestMessage">
+		<part name="parameters"
+				element="tns:AuthorizationNewAccount"/>
+	</message>
+	<message name="AuthorizationNewAccountResponseMessage">
+		<part name="parameters"
+				element="tns:AuthorizationNewAccountResponse"/>
+	</message>
+	<message name="getPolicyListRequestMessage">
+		<part name="parameters"
+				element="tns:getPolicyList"/>
+	</message>
+	<message name="getPolicyListResponseMessage">
+		<part name="parameters"
+				element="tns:getPolicyListResponse"/>
+	</message>
+	<message name="getPolicyDetailsRequestMessage">
+		<part name="parameters"
+				element="tns:getPolicyDetails"/>
+	</message>
+	<message name="getPolicyDetailsResponseMessage">
+		<part name="parameters"
+				element="tns:getPolicyDetailsResponse"/>
+	</message>
+	<message name="AuthorizationNewAccountRoutingRequestMessage">
+		<part name="parameters"
+				element="tns:AuthorizationNewAccountRouting"/>
+	</message>
+	<message name="AuthorizationNewAccountRoutingResponseMessage">
+		<part name="parameters"
+				element="tns:AuthorizationNewAccountRoutingResponse"/>
+	</message>
+	<message name="getContractsDetails2RequestMessage">
+		<part name="parameters"
+				element="tns:getContractsDetails2"/>
+	</message>
+	<message name="getContractsDetails2ResponseMessage">
+		<part name="parameters"
+				element="tns:getContractsDetails2Response"/>
+	</message>
+	<message name="getInsuredWithPolisAppliedRequestMessage">
+		<part name="parameters"
+				element="tns:getInsuredWithPolisApplied"/>
+	</message>
+	<message name="getInsuredWithPolisAppliedResponseMessage">
+		<part name="parameters"
+				element="tns:getInsuredWithPolisAppliedResponse"/>
+	</message>
+	<message name="getCommercialOfferRequestMessage">
+		<part name="parameters"
+				element="tns:getCommercialOffer"/>
+	</message>
+	<message name="getCommercialOfferResponseMessage">
+		<part name="parameters"
+				element="tns:getCommercialOfferResponse"/>
+	</message>
+	<message name="getInsProgramFilesRequestMessage">
+		<part name="parameters"
+				element="tns:getInsProgramFiles"/>
+	</message>
+	<message name="getInsProgramFilesResponseMessage">
+		<part name="parameters"
+				element="tns:getInsProgramFilesResponse"/>
+	</message>
+	<message name="getAbilityOfSaleRequestMessage">
+		<part name="parameters"
+				element="tns:getAbilityOfSale"/>
+	</message>
+	<message name="getAbilityOfSaleResponseMessage">
+		<part name="parameters"
+				element="tns:getAbilityOfSaleResponse"/>
+	</message>
+	<message name="getLossInsuredRequestMessage">
+		<part name="parameters"
+				element="tns:getLossInsured"/>
+	</message>
+	<message name="getLossInsuredResponseMessage">
+		<part name="parameters"
+				element="tns:getLossInsuredResponse"/>
+	</message>
+	<message name="getPetitionsRequestMessage">
+		<part name="parameters"
+				element="tns:getPetitions"/>
+	</message>
+	<message name="getPetitionsResponseMessage">
+		<part name="parameters"
+				element="tns:getPetitionsResponse"/>
+	</message>
+	<message name="getTreatmentRequestMessage">
+		<part name="parameters"
+				element="tns:getTreatment"/>
+	</message>
+	<message name="getTreatmentResponseMessage">
+		<part name="parameters"
+				element="tns:getTreatmentResponse"/>
+	</message>
+	<message name="getLossAlertRequestMessage">
+		<part name="parameters"
+				element="tns:getLossAlert"/>
+	</message>
+	<message name="getLossAlertResponseMessage">
+		<part name="parameters"
+				element="tns:getLossAlertResponse"/>
+	</message>
+	<message name="TestContractRequestMessage">
+		<part name="parameters"
+				element="tns:TestContract"/>
+	</message>
+	<message name="TestContractResponseMessage">
+		<part name="parameters"
+				element="tns:TestContractResponse"/>
+	</message>
+	<message name="getInsProgrammDetailsRequestMessage">
+		<part name="parameters"
+				element="tns:getInsProgrammDetails"/>
+	</message>
+	<message name="getInsProgrammDetailsResponseMessage">
+		<part name="parameters"
+				element="tns:getInsProgrammDetailsResponse"/>
+	</message>
+	<message name="GetInfoCopaymensPolicyRequestMessage">
+		<part name="parameters"
+				element="tns:GetInfoCopaymensPolicy"/>
+	</message>
+	<message name="GetInfoCopaymensPolicyResponseMessage">
+		<part name="parameters"
+				element="tns:GetInfoCopaymensPolicyResponse"/>
+	</message>
+	<message name="GetPaymentListRequestMessage">
+		<part name="parameters"
+				element="tns:GetPaymentList"/>
+	</message>
+	<message name="GetPaymentListResponseMessage">
+		<part name="parameters"
+				element="tns:GetPaymentListResponse"/>
+	</message>
+	<message name="GetDataAccountRequestMessage">
+		<part name="parameters"
+				element="tns:GetDataAccount"/>
+	</message>
+	<message name="GetDataAccountResponseMessage">
+		<part name="parameters"
+				element="tns:GetDataAccountResponse"/>
+	</message>
+	<message name="getContractAndLossList_v2RequestMessage">
+		<part name="parameters"
+				element="tns:getContractAndLossList_v2"/>
+	</message>
+	<message name="getContractAndLossList_v2ResponseMessage">
+		<part name="parameters"
+				element="tns:getContractAndLossList_v2Response"/>
+	</message>
+	<message name="getSignKPSRKKRequestMessage">
+		<part name="parameters"
+				element="tns:getSignKPSRKK"/>
+	</message>
+	<message name="getSignKPSRKKResponseMessage">
+		<part name="parameters"
+				element="tns:getSignKPSRKKResponse"/>
+	</message>
+	<message name="RequestOnCoPaymentRequestMessage">
+		<part name="parameters"
+				element="tns:RequestOnCoPayment"/>
+	</message>
+	<message name="RequestOnCoPaymentResponseMessage">
+		<part name="parameters"
+				element="tns:RequestOnCoPaymentResponse"/>
+	</message>
+	<message name="CheckRequestOnCoPaymentRequestMessage">
+		<part name="parameters"
+				element="tns:CheckRequestOnCoPayment"/>
+	</message>
+	<message name="CheckRequestOnCoPaymentResponseMessage">
+		<part name="parameters"
+				element="tns:CheckRequestOnCoPaymentResponse"/>
+	</message>
+	<message name="getContragentListRequestMessage">
+		<part name="parameters"
+				element="tns:getContragentList"/>
+	</message>
+	<message name="getContragentListResponseMessage">
+		<part name="parameters"
+				element="tns:getContragentListResponse"/>
+	</message>
+	<message name="getCountInsuredOfContractsRequestMessage">
+		<part name="parameters"
+				element="tns:getCountInsuredOfContracts"/>
+	</message>
+	<message name="getCountInsuredOfContractsResponseMessage">
+		<part name="parameters"
+				element="tns:getCountInsuredOfContractsResponse"/>
+	</message>
+	<message name="getAgreementOfContractRequestMessage">
+		<part name="parameters"
+				element="tns:getAgreementOfContract"/>
+	</message>
+	<message name="getAgreementOfContractResponseMessage">
+		<part name="parameters"
+				element="tns:getAgreementOfContractResponse"/>
+	</message>
+	<message name="getProlongationKASKORequestMessage">
+		<part name="parameters"
+				element="tns:getProlongationKASKO"/>
+	</message>
+	<message name="getProlongationKASKOResponseMessage">
+		<part name="parameters"
+				element="tns:getProlongationKASKOResponse"/>
+	</message>
+	<message name="GetGuaranteeLetterRequestMessage">
+		<part name="parameters"
+				element="tns:GetGuaranteeLetter"/>
+	</message>
+	<message name="GetGuaranteeLetterResponseMessage">
+		<part name="parameters"
+				element="tns:GetGuaranteeLetterResponse"/>
+	</message>
+	<message name="GetPolicyListOnContractRequestMessage">
+		<part name="parameters"
+				element="tns:GetPolicyListOnContract"/>
+	</message>
+	<message name="GetPolicyListOnContractResponseMessage">
+		<part name="parameters"
+				element="tns:GetPolicyListOnContractResponse"/>
+	</message>
+	<message name="SetB2BOrderRequestMessage">
+		<part name="parameters"
+				element="tns:SetB2BOrder"/>
+	</message>
+	<message name="SetB2BOrderResponseMessage">
+		<part name="parameters"
+				element="tns:SetB2BOrderResponse"/>
+	</message>
+	<message name="CheckB2BOrderRequestMessage">
+		<part name="parameters"
+				element="tns:CheckB2BOrder"/>
+	</message>
+	<message name="CheckB2BOrderResponseMessage">
+		<part name="parameters"
+				element="tns:CheckB2BOrderResponse"/>
+	</message>
+	<message name="getInsProgrammOnDogRequestMessage">
+		<part name="parameters"
+				element="tns:getInsProgrammOnDog"/>
+	</message>
+	<message name="getInsProgrammOnDogResponseMessage">
+		<part name="parameters"
+				element="tns:getInsProgrammOnDogResponse"/>
+	</message>
+	<message name="getContractAndLossList_v3RequestMessage">
+		<part name="parameters"
+				element="tns:getContractAndLossList_v3"/>
+	</message>
+	<message name="getContractAndLossList_v3ResponseMessage">
+		<part name="parameters"
+				element="tns:getContractAndLossList_v3Response"/>
+	</message>
+	<portType name="PersonalCabinetPortType">
+		<operation name="getContractAndLossList">
+			<input message="tns:getContractAndLossListRequestMessage"/>
+			<output message="tns:getContractAndLossListResponseMessage"/>
+		</operation>
+		<operation name="getContractsDetails">
+			<input message="tns:getContractsDetailsRequestMessage"/>
+			<output message="tns:getContractsDetailsResponseMessage"/>
+		</operation>
+		<operation name="getLossDetails">
+			<input message="tns:getLossDetailsRequestMessage"/>
+			<output message="tns:getLossDetailsResponseMessage"/>
+		</operation>
+		<operation name="AuthorizationNewAccount">
+			<input message="tns:AuthorizationNewAccountRequestMessage"/>
+			<output message="tns:AuthorizationNewAccountResponseMessage"/>
+		</operation>
+		<operation name="getPolicyList">
+			<input message="tns:getPolicyListRequestMessage"/>
+			<output message="tns:getPolicyListResponseMessage"/>
+		</operation>
+		<operation name="getPolicyDetails">
+			<input message="tns:getPolicyDetailsRequestMessage"/>
+			<output message="tns:getPolicyDetailsResponseMessage"/>
+		</operation>
+		<operation name="AuthorizationNewAccountRouting">
+			<input message="tns:AuthorizationNewAccountRoutingRequestMessage"/>
+			<output message="tns:AuthorizationNewAccountRoutingResponseMessage"/>
+		</operation>
+		<operation name="getContractsDetails2">
+			<input message="tns:getContractsDetails2RequestMessage"/>
+			<output message="tns:getContractsDetails2ResponseMessage"/>
+		</operation>
+		<operation name="getInsuredWithPolisApplied">
+			<input message="tns:getInsuredWithPolisAppliedRequestMessage"/>
+			<output message="tns:getInsuredWithPolisAppliedResponseMessage"/>
+		</operation>
+		<operation name="getCommercialOffer">
+			<input message="tns:getCommercialOfferRequestMessage"/>
+			<output message="tns:getCommercialOfferResponseMessage"/>
+		</operation>
+		<operation name="getInsProgramFiles">
+			<input message="tns:getInsProgramFilesRequestMessage"/>
+			<output message="tns:getInsProgramFilesResponseMessage"/>
+		</operation>
+		<operation name="getAbilityOfSale">
+			<input message="tns:getAbilityOfSaleRequestMessage"/>
+			<output message="tns:getAbilityOfSaleResponseMessage"/>
+		</operation>
+		<operation name="getLossInsured">
+			<input message="tns:getLossInsuredRequestMessage"/>
+			<output message="tns:getLossInsuredResponseMessage"/>
+		</operation>
+		<operation name="getPetitions">
+			<input message="tns:getPetitionsRequestMessage"/>
+			<output message="tns:getPetitionsResponseMessage"/>
+		</operation>
+		<operation name="getTreatment">
+			<input message="tns:getTreatmentRequestMessage"/>
+			<output message="tns:getTreatmentResponseMessage"/>
+		</operation>
+		<operation name="getLossAlert">
+			<input message="tns:getLossAlertRequestMessage"/>
+			<output message="tns:getLossAlertResponseMessage"/>
+		</operation>
+		<operation name="TestContract">
+			<input message="tns:TestContractRequestMessage"/>
+			<output message="tns:TestContractResponseMessage"/>
+		</operation>
+		<operation name="getInsProgrammDetails">
+			<input message="tns:getInsProgrammDetailsRequestMessage"/>
+			<output message="tns:getInsProgrammDetailsResponseMessage"/>
+		</operation>
+		<operation name="GetInfoCopaymensPolicy">
+			<input message="tns:GetInfoCopaymensPolicyRequestMessage"/>
+			<output message="tns:GetInfoCopaymensPolicyResponseMessage"/>
+		</operation>
+		<operation name="GetPaymentList">
+			<input message="tns:GetPaymentListRequestMessage"/>
+			<output message="tns:GetPaymentListResponseMessage"/>
+		</operation>
+		<operation name="GetDataAccount">
+			<input message="tns:GetDataAccountRequestMessage"/>
+			<output message="tns:GetDataAccountResponseMessage"/>
+		</operation>
+		<operation name="getContractAndLossList_v2">
+			<input message="tns:getContractAndLossList_v2RequestMessage"/>
+			<output message="tns:getContractAndLossList_v2ResponseMessage"/>
+		</operation>
+		<operation name="getSignKPSRKK">
+			<input message="tns:getSignKPSRKKRequestMessage"/>
+			<output message="tns:getSignKPSRKKResponseMessage"/>
+		</operation>
+		<operation name="RequestOnCoPayment">
+			<input message="tns:RequestOnCoPaymentRequestMessage"/>
+			<output message="tns:RequestOnCoPaymentResponseMessage"/>
+		</operation>
+		<operation name="CheckRequestOnCoPayment">
+			<input message="tns:CheckRequestOnCoPaymentRequestMessage"/>
+			<output message="tns:CheckRequestOnCoPaymentResponseMessage"/>
+		</operation>
+		<operation name="getContragentList">
+			<input message="tns:getContragentListRequestMessage"/>
+			<output message="tns:getContragentListResponseMessage"/>
+		</operation>
+		<operation name="getCountInsuredOfContracts">
+			<input message="tns:getCountInsuredOfContractsRequestMessage"/>
+			<output message="tns:getCountInsuredOfContractsResponseMessage"/>
+		</operation>
+		<operation name="getAgreementOfContract">
+			<input message="tns:getAgreementOfContractRequestMessage"/>
+			<output message="tns:getAgreementOfContractResponseMessage"/>
+		</operation>
+		<operation name="getProlongationKASKO">
+			<input message="tns:getProlongationKASKORequestMessage"/>
+			<output message="tns:getProlongationKASKOResponseMessage"/>
+		</operation>
+		<operation name="GetGuaranteeLetter">
+			<input message="tns:GetGuaranteeLetterRequestMessage"/>
+			<output message="tns:GetGuaranteeLetterResponseMessage"/>
+		</operation>
+		<operation name="GetPolicyListOnContract">
+			<input message="tns:GetPolicyListOnContractRequestMessage"/>
+			<output message="tns:GetPolicyListOnContractResponseMessage"/>
+		</operation>
+		<operation name="SetB2BOrder">
+			<input message="tns:SetB2BOrderRequestMessage"/>
+			<output message="tns:SetB2BOrderResponseMessage"/>
+		</operation>
+		<operation name="CheckB2BOrder">
+			<input message="tns:CheckB2BOrderRequestMessage"/>
+			<output message="tns:CheckB2BOrderResponseMessage"/>
+		</operation>
+		<operation name="getInsProgrammOnDog">
+			<input message="tns:getInsProgrammOnDogRequestMessage"/>
+			<output message="tns:getInsProgrammOnDogResponseMessage"/>
+		</operation>
+		<operation name="getContractAndLossList_v3">
+			<input message="tns:getContractAndLossList_v3RequestMessage"/>
+			<output message="tns:getContractAndLossList_v3ResponseMessage"/>
+		</operation>
+	</portType>
+	<binding name="PersonalCabinetSoapBinding"
+			type="tns:PersonalCabinetPortType">
+		<soapbind:binding style="document"
+				transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="getContractAndLossList">
+			<soapbind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getContractAndLossList"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getContractsDetails">
+			<soapbind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getContractsDetails"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getLossDetails">
+			<soapbind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getLossDetails"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="AuthorizationNewAccount">
+			<soapbind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:AuthorizationNewAccount"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getPolicyList">
+			<soapbind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getPolicyList"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getPolicyDetails">
+			<soapbind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getPolicyDetails"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="AuthorizationNewAccountRouting">
+			<soapbind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:AuthorizationNewAccountRouting"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getContractsDetails2">
+			<soapbind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getContractsDetails2"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getInsuredWithPolisApplied">
+			<soapbind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getInsuredWithPolisApplied"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getCommercialOffer">
+			<soapbind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getCommercialOffer"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getInsProgramFiles">
+			<soapbind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getInsProgramFiles"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getAbilityOfSale">
+			<soapbind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getAbilityOfSale"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getLossInsured">
+			<soapbind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getLossInsured"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getPetitions">
+			<soapbind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getPetitions"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getTreatment">
+			<soapbind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getTreatment"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getLossAlert">
+			<soapbind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getLossAlert"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="TestContract">
+			<soapbind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:TestContract"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getInsProgrammDetails">
+			<soapbind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getInsProgrammDetails"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetInfoCopaymensPolicy">
+			<soapbind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:GetInfoCopaymensPolicy"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetPaymentList">
+			<soapbind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:GetPaymentList"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetDataAccount">
+			<soapbind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:GetDataAccount"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getContractAndLossList_v2">
+			<soapbind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getContractAndLossList_v2"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getSignKPSRKK">
+			<soapbind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getSignKPSRKK"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="RequestOnCoPayment">
+			<soapbind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:RequestOnCoPayment"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="CheckRequestOnCoPayment">
+			<soapbind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:CheckRequestOnCoPayment"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getContragentList">
+			<soapbind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getContragentList"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getCountInsuredOfContracts">
+			<soapbind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getCountInsuredOfContracts"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getAgreementOfContract">
+			<soapbind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getAgreementOfContract"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getProlongationKASKO">
+			<soapbind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getProlongationKASKO"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetGuaranteeLetter">
+			<soapbind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:GetGuaranteeLetter"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetPolicyListOnContract">
+			<soapbind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:GetPolicyListOnContract"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="SetB2BOrder">
+			<soapbind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:SetB2BOrder"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="CheckB2BOrder">
+			<soapbind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:CheckB2BOrder"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getInsProgrammOnDog">
+			<soapbind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getInsProgrammOnDog"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getContractAndLossList_v3">
+			<soapbind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getContractAndLossList_v3"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<binding name="PersonalCabinetSoap12Binding"
+			type="tns:PersonalCabinetPortType">
+		<soap12bind:binding style="document"
+				transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="getContractAndLossList">
+			<soap12bind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getContractAndLossList"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getContractsDetails">
+			<soap12bind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getContractsDetails"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getLossDetails">
+			<soap12bind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getLossDetails"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="AuthorizationNewAccount">
+			<soap12bind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:AuthorizationNewAccount"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getPolicyList">
+			<soap12bind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getPolicyList"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getPolicyDetails">
+			<soap12bind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getPolicyDetails"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="AuthorizationNewAccountRouting">
+			<soap12bind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:AuthorizationNewAccountRouting"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getContractsDetails2">
+			<soap12bind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getContractsDetails2"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getInsuredWithPolisApplied">
+			<soap12bind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getInsuredWithPolisApplied"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getCommercialOffer">
+			<soap12bind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getCommercialOffer"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getInsProgramFiles">
+			<soap12bind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getInsProgramFiles"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getAbilityOfSale">
+			<soap12bind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getAbilityOfSale"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getLossInsured">
+			<soap12bind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getLossInsured"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getPetitions">
+			<soap12bind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getPetitions"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getTreatment">
+			<soap12bind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getTreatment"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getLossAlert">
+			<soap12bind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getLossAlert"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="TestContract">
+			<soap12bind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:TestContract"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getInsProgrammDetails">
+			<soap12bind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getInsProgrammDetails"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetInfoCopaymensPolicy">
+			<soap12bind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:GetInfoCopaymensPolicy"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetPaymentList">
+			<soap12bind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:GetPaymentList"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetDataAccount">
+			<soap12bind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:GetDataAccount"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getContractAndLossList_v2">
+			<soap12bind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getContractAndLossList_v2"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getSignKPSRKK">
+			<soap12bind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getSignKPSRKK"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="RequestOnCoPayment">
+			<soap12bind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:RequestOnCoPayment"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="CheckRequestOnCoPayment">
+			<soap12bind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:CheckRequestOnCoPayment"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getContragentList">
+			<soap12bind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getContragentList"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getCountInsuredOfContracts">
+			<soap12bind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getCountInsuredOfContracts"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getAgreementOfContract">
+			<soap12bind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getAgreementOfContract"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getProlongationKASKO">
+			<soap12bind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getProlongationKASKO"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetGuaranteeLetter">
+			<soap12bind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:GetGuaranteeLetter"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetPolicyListOnContract">
+			<soap12bind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:GetPolicyListOnContract"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="SetB2BOrder">
+			<soap12bind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:SetB2BOrder"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="CheckB2BOrder">
+			<soap12bind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:CheckB2BOrder"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getInsProgrammOnDog">
+			<soap12bind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getInsProgrammOnDog"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getContractAndLossList_v3">
+			<soap12bind:operation style="document"
+					soapAction="http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getContractAndLossList_v3"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<service name="PersonalCabinet">
+		<port name="PersonalCabinetSoap"
+				binding="tns:PersonalCabinetSoapBinding">
+			<documentation> 
+				<wsi:Claim xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/"
+						conformsTo="http://ws-i.org/profiles/basic/1.1"/>
+			</documentation>
+			<soapbind:address location="http://s00-0000-1c20/Integrator_ePolis/ws/PersonalCabinet.1cws"/>
+		</port>
+		<port name="PersonalCabinetSoap12"
+				binding="tns:PersonalCabinetSoap12Binding">
+			<soap12bind:address location="http://s00-0000-1c20/Integrator_ePolis/ws/PersonalCabinet.1cws"/>
+		</port>
+	</service>
+</definitions>

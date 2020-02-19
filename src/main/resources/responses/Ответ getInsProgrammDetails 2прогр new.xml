@@ -1,0 +1,2292 @@
+<!-- edited with XMLSpy v2007 sp1 (http://www.altova.com) by  () -->
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+	<soap:Body>
+		<m:getInsProgrammDetailsResponse xmlns:m="http://www.perconalcabinet.sogaz.ru">
+			<m:return xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+				<ProgrammList xmlns="http://www.integrator.sogaz.ru">
+					<ID_Programm>50ec086a-a09e-4be5-86b9-579517ffe07e</ID_Programm>
+					<Name>3_В_1_Екатеринбург</Name>
+					<SectionPropertyList SectionName="">
+						<ItemList ID_Item="65e65889-b6c8-11e8-824d-5cb90192efd5" Name_Item="Город программы" TypeValue="Строка">
+							<RowNumber>0</RowNumber>
+							<Value>Екатеринбург</Value>
+						</ItemList>
+						<ItemList ID_Item="65e6588d-b6c8-11e8-824d-5cb90192efd5" Name_Item="Уровень обслуживания по программе" TypeValue="Строка">
+							<RowNumber>0</RowNumber>
+							<Value>Начальный</Value>
+						</ItemList>
+						<ItemList ID_Item="862ac816-2a16-11e8-8228-5cb90192efd5" Name_Item="Уровень программы СБ" TypeValue="Строка">
+							<RowNumber>0</RowNumber>
+							<Value>Классический_после_1_года_Сотрудник</Value>
+						</ItemList>
+						<ItemList ID_Item="e23b2d27-bf48-11e5-80d6-5cb90192efd5" Name_Item="Страховая программа ДМС_ВПМЖ" TypeValue="Строка">
+							<RowNumber>0</RowNumber>
+							<Value>1</Value>
+						</ItemList>
+					</SectionPropertyList>
+					<HaveCoPayments>false</HaveCoPayments>
+					<RVL>false</RVL>
+					<RequestPolisVZROnLK>true</RequestPolisVZROnLK>
+					<RequesCallBack>false</RequesCallBack>
+					<CallDoctorCurator>false</CallDoctorCurator>
+					<ProgrammServices>
+						<LPU_Name>"Европейский медицинский центр "УГМК-Здоровье" отделение Программа Врач офиса ПАО Сбербанк" ООО</LPU_Name>
+						<LPU_ID>f1ffe5b7-5584-4e49-8d16-f82fe57f864a</LPU_ID>
+						<Treatment_ID>677a775a-7094-11db-a75b-000802ce8208</Treatment_ID>
+						<Treatment_Name>Врач офиса/Личный врач</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>true</DirectAttachment>
+						<NotDirectAttachment>false</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"СОБ № 2" ГБУЗ СО"</LPU_Name>
+						<LPU_ID>c61e18cc-50c4-11e2-97f4-0022642a2792</LPU_ID>
+						<Treatment_ID>37712ff1-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Плановая госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Ригла" ООО</LPU_Name>
+						<LPU_ID>99dc42c3-7806-4b7a-a5b6-fd08acfc4487</LPU_ID>
+						<Treatment_ID>a0933767-0a51-11df-8245-002481aec094</Treatment_ID>
+						<Treatment_Name>Аптека</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>2018-10-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Ригла" отделение СБЕРБАНК" ООО</LPU_Name>
+						<LPU_ID>51364fdf-ba59-4c7c-8b0c-b4d4af52b7dc</LPU_ID>
+						<Treatment_ID>a0933767-0a51-11df-8245-002481aec094</Treatment_ID>
+						<Treatment_Name>Аптека</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>true</DirectAttachment>
+						<NotDirectAttachment>false</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"ЦГКБ № 6" МБУ Екатеринбург"</LPU_Name>
+						<LPU_ID>4c4e6cae-94da-11db-b143-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff1-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Плановая госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"ЦГКБ № 6" МБУ Екатеринбург"</LPU_Name>
+						<LPU_ID>4c4e6cae-94da-11db-b143-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff2-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Экстренная госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"ГКБ № 40" МАУ</LPU_Name>
+						<LPU_ID>0bb31e29-91d4-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff1-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Плановая госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"ГКБ № 40" МАУ</LPU_Name>
+						<LPU_ID>0bb31e29-91d4-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff2-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Экстренная госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Савитар Груп" ООО</LPU_Name>
+						<LPU_ID>d4382f16-abe7-4709-9989-b154bad2b2c8</LPU_ID>
+						<Treatment_ID>a308f087-0b7b-11e5-9484-9cb6549ab004</Treatment_ID>
+						<Treatment_Name>Мед помощь за рубежом. Программа А</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>true</DirectAttachment>
+						<NotDirectAttachment>false</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская больница № 41" отделение Сбербанк АПО фикс" ООО</LPU_Name>
+						<LPU_ID>5ba877bb-8165-443c-bcc4-bc22c34c731b</LPU_ID>
+						<Treatment_ID>61c5a095-26fd-11dd-b262-001279d33d9f</Treatment_ID>
+						<Treatment_Name>Амб. взрослые</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>true</DirectAttachment>
+						<NotDirectAttachment>false</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Табиб" ООО</LPU_Name>
+						<LPU_ID>5ad316d7-2b68-11e7-81a3-5cb90192efd5</LPU_ID>
+						<Treatment_ID>61c5a095-26fd-11dd-b262-001279d33d9f</Treatment_ID>
+						<Treatment_Name>Амб. взрослые</Treatment_Name>
+						<BeginDate>2019-06-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"ЦГБ № 3" г. Екатеринбурга МАУЗ</LPU_Name>
+						<LPU_ID>4f76be2f-8d77-4b8f-92ff-a242b182bc98</LPU_ID>
+						<Treatment_ID>37712ff1-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Плановая госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"ЦГБ № 3" г. Екатеринбурга МАУЗ</LPU_Name>
+						<LPU_ID>4f76be2f-8d77-4b8f-92ff-a242b182bc98</LPU_ID>
+						<Treatment_ID>37712ff2-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Экстренная госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Новая больница" МО ООО</LPU_Name>
+						<LPU_ID>e3aff885-94d2-11db-b143-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff1-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Плановая госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Новая больница" МО ООО</LPU_Name>
+						<LPU_ID>e3aff885-94d2-11db-b143-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff2-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Экстренная госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Новая больница" МО ООО</LPU_Name>
+						<LPU_ID>e3aff885-94d2-11db-b143-0017085d7c0a</LPU_ID>
+						<Treatment_ID>61c5a095-26fd-11dd-b262-001279d33d9f</Treatment_ID>
+						<Treatment_Name>Амб. взрослые</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>МАУ "ЦГБ № 20" АУ</LPU_Name>
+						<LPU_ID>e3aff880-94d2-11db-b143-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff1-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Плановая госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>МАУ "ЦГБ № 20" АУ</LPU_Name>
+						<LPU_ID>e3aff880-94d2-11db-b143-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff2-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Экстренная госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"ЦГКБ № 1" Октябрьского района"МБУ"</LPU_Name>
+						<LPU_ID>e3aff87c-94d2-11db-b143-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff1-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Плановая госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"ЦГКБ № 1" Октябрьского района"МБУ"</LPU_Name>
+						<LPU_ID>e3aff87c-94d2-11db-b143-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff2-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Экстренная госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"ЦГКБ № 24" МАУ</LPU_Name>
+						<LPU_ID>e3aff87a-94d2-11db-b143-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff1-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Плановая госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"ЦГКБ № 24" МАУ</LPU_Name>
+						<LPU_ID>e3aff87a-94d2-11db-b143-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff2-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Экстренная госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"ЦГКБ № 23" МАУ</LPU_Name>
+						<LPU_ID>e3aff878-94d2-11db-b143-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff1-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Плановая госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"ЦГКБ № 23" МАУ</LPU_Name>
+						<LPU_ID>e3aff878-94d2-11db-b143-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff2-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Экстренная госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"ОДКБ" ГАУЗ СО (г. Екатеринбург)</LPU_Name>
+						<LPU_ID>859572e5-94da-11db-b143-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff1-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Плановая госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"ОДКБ" ГАУЗ СО (г. Екатеринбург)</LPU_Name>
+						<LPU_ID>859572e5-94da-11db-b143-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff2-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Экстренная госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"ЕКАМЕДТЕСТ" отделение Программа Врач офиса ПАО Сбербанк" ООО</LPU_Name>
+						<LPU_ID>68968ebb-c3aa-4a83-95a1-c0d9ade87b00</LPU_ID>
+						<Treatment_ID>677a775a-7094-11db-a75b-000802ce8208</Treatment_ID>
+						<Treatment_Name>Врач офиса/Личный врач</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>true</DirectAttachment>
+						<NotDirectAttachment>false</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"ЦГБ № 7"МБУ"</LPU_Name>
+						<LPU_ID>63438e0a-94da-11db-b143-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff1-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Плановая госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"ЦГБ № 7"МБУ"</LPU_Name>
+						<LPU_ID>63438e0a-94da-11db-b143-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff2-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Экстренная госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>ГБ № 36 "Травматологическая" МАУ</LPU_Name>
+						<LPU_ID>63438dd3-94da-11db-b143-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff1-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Плановая госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>ГБ № 36 "Травматологическая" МАУ</LPU_Name>
+						<LPU_ID>63438dd3-94da-11db-b143-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff2-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Экстренная госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"ЕКАМЕДТЕСТ" ООО</LPU_Name>
+						<LPU_ID>27b11366-b13d-43d5-8264-b97c2bba53a4</LPU_ID>
+						<Treatment_ID>61c5a095-26fd-11dd-b262-001279d33d9f</Treatment_ID>
+						<Treatment_Name>Амб. взрослые</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>2018-10-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"ЕКАМЕДТЕСТ" ООО</LPU_Name>
+						<LPU_ID>27b11366-b13d-43d5-8264-b97c2bba53a4</LPU_ID>
+						<Treatment_ID>677a775a-7094-11db-a75b-000802ce8208</Treatment_ID>
+						<Treatment_Name>Врач офиса/Личный врач</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>2018-10-01</EndDate>
+						<DirectAttachment>true</DirectAttachment>
+						<NotDirectAttachment>false</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская больница № 41" ООО</LPU_Name>
+						<LPU_ID>d9a67b42-94d1-11db-b143-0017085d7c0a</LPU_ID>
+						<Treatment_ID>61c5a095-26fd-11dd-b262-001279d33d9f</Treatment_ID>
+						<Treatment_Name>Амб. взрослые</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>2018-10-01</EndDate>
+						<DirectAttachment>true</DirectAttachment>
+						<NotDirectAttachment>false</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>МАУ "ДГКБ № 9" АУ</LPU_Name>
+						<LPU_ID>d9a67b2b-94d1-11db-b143-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff1-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Плановая госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>МАУ "ДГКБ № 9" АУ</LPU_Name>
+						<LPU_ID>d9a67b2b-94d1-11db-b143-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff2-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Экстренная госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>МАУ "ДГКБ № 11"</LPU_Name>
+						<LPU_ID>94019927-91d1-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff1-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Плановая госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>МАУ "ДГКБ № 11"</LPU_Name>
+						<LPU_ID>94019927-91d1-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff2-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Экстренная госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Дорожная больница на станции Свердловск-Пассажирский ОАО "РЖД" НУЗ</LPU_Name>
+						<LPU_ID>7b48d1d9-0010-4327-afb5-afe486589d7f</LPU_ID>
+						<Treatment_ID>61c5a095-26fd-11dd-b262-001279d33d9f</Treatment_ID>
+						<Treatment_Name>Амб. взрослые</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>2018-11-22</EndDate>
+						<DirectAttachment>true</DirectAttachment>
+						<NotDirectAttachment>false</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+				</ProgrammList>
+				<ProgrammList xmlns="http://www.integrator.sogaz.ru">
+					<ID_Programm>94bb39b1-f1c8-42dc-adf9-3c4c09d4b319</ID_Programm>
+					<Name>2 (2) регион</Name>
+					<SectionPropertyList SectionName="">
+						<ItemList ID_Item="e23b2d27-bf48-11e5-80d6-5cb90192efd5" Name_Item="Страховая программа ДМС_ВПМЖ" TypeValue="Строка">
+							<RowNumber>0</RowNumber>
+							<Value>0</Value>
+						</ItemList>
+					</SectionPropertyList>
+					<HaveCoPayments>false</HaveCoPayments>
+					<RVL>false</RVL>
+					<RequestPolisVZROnLK>false</RequestPolisVZROnLK>
+					<RequesCallBack>false</RequesCallBack>
+					<CallDoctorCurator>false</CallDoctorCurator>
+					<ProgrammServices>
+						<LPU_Name>"ОК "ЭКСИМЕР НН" ООО</LPU_Name>
+						<LPU_ID>ff536e80-ff0a-4465-9b06-531ce496b9a8</LPU_ID>
+						<Treatment_ID>61c5a095-26fd-11dd-b262-001279d33d9f</Treatment_ID>
+						<Treatment_Name>Амб. взрослые</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"МЦ "Персона" ООО</LPU_Name>
+						<LPU_ID>4cc8b8c9-8eb8-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>d045bd5b-5832-11db-a75b-000802ce8208</Treatment_ID>
+						<Treatment_Name>Стоматология в ЛПУ</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>true</DirectAttachment>
+						<NotDirectAttachment>false</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"МЦ "Персона" ООО</LPU_Name>
+						<LPU_ID>4cc8b8c9-8eb8-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>61c5a095-26fd-11dd-b262-001279d33d9f</Treatment_ID>
+						<Treatment_Name>Амб. взрослые</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>true</DirectAttachment>
+						<NotDirectAttachment>false</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"МЦ "Персона" ООО</LPU_Name>
+						<LPU_ID>4cc8b8c9-8eb8-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>558d924c-bf94-11dd-b7bf-001f290776b6</Treatment_ID>
+						<Treatment_Name> ПНД в пределах границ города</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>true</DirectAttachment>
+						<NotDirectAttachment>false</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Инфекционная клиническая больница № 2" НО ГБУЗ"</LPU_Name>
+						<LPU_ID>32e96416-8eb3-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>c10f9e8c-3799-11e2-94a8-002481adcebc</Treatment_ID>
+						<Treatment_Name>Стационар одного дня</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Инфекционная клиническая больница № 2" НО ГБУЗ"</LPU_Name>
+						<LPU_ID>32e96416-8eb3-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff1-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Плановая госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Инфекционная клиническая больница № 2" НО ГБУЗ"</LPU_Name>
+						<LPU_ID>32e96416-8eb3-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff2-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Экстренная госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Инфекционная клиническая больница № 2" НО ГБУЗ"</LPU_Name>
+						<LPU_ID>32e96416-8eb3-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>61c5a095-26fd-11dd-b262-001279d33d9f</Treatment_ID>
+						<Treatment_Name>Амб. взрослые</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Стоматологическая поликлиника Нижегородского р-на г.Н.Новгорода" ГБУЗ НО"</LPU_Name>
+						<LPU_ID>1aabd1f5-8ebc-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>d045bd5b-5832-11db-a75b-000802ce8208</Treatment_ID>
+						<Treatment_Name>Стоматология в ЛПУ</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Стоматологическая поликлиника Нижегородского р-на г.Н.Новгорода" ГБУЗ НО"</LPU_Name>
+						<LPU_ID>1aabd1f5-8ebc-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>d045bd5e-5832-11db-a75b-000802ce8208</Treatment_ID>
+						<Treatment_Name>Стоматология в спец.клиниках</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Стоматологическая поликлиника Нижегородского р-на г.Н.Новгорода" ГБУЗ НО"</LPU_Name>
+						<LPU_ID>1aabd1f5-8ebc-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>d045bd5b-5832-11db-a75b-000802ce8208</Treatment_ID>
+						<Treatment_Name>Стоматология в ЛПУ</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Стоматологическая поликлиника Нижегородского р-на г.Н.Новгорода" ГБУЗ НО"</LPU_Name>
+						<LPU_ID>1aabd1f5-8ebc-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>d045bd5e-5832-11db-a75b-000802ce8208</Treatment_ID>
+						<Treatment_Name>Стоматология в спец.клиниках</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Стомат-Люкс" ООО</LPU_Name>
+						<LPU_ID>1aabd1f1-8ebc-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>d045bd5e-5832-11db-a75b-000802ce8208</Treatment_ID>
+						<Treatment_Name>Стоматология в спец.клиниках</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>true</DirectAttachment>
+						<NotDirectAttachment>false</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"СККБ" НО ГБУЗ"</LPU_Name>
+						<LPU_ID>5f47ec0e-8ebb-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff1-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Плановая госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"СККБ" НО ГБУЗ"</LPU_Name>
+						<LPU_ID>5f47ec0e-8ebb-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>61c5a095-26fd-11dd-b262-001279d33d9f</Treatment_ID>
+						<Treatment_Name>Амб. взрослые</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"НОКБ им.Н.А.Семашко" ГБУЗ НО"</LPU_Name>
+						<LPU_ID>fa158662-8eba-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff1-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Плановая госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"НОКБ им.Н.А.Семашко" ГБУЗ НО"</LPU_Name>
+						<LPU_ID>fa158662-8eba-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff2-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Экстренная госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"НОКБ им.Н.А.Семашко" ГБУЗ НО"</LPU_Name>
+						<LPU_ID>fa158662-8eba-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>d045bd5b-5832-11db-a75b-000802ce8208</Treatment_ID>
+						<Treatment_Name>Стоматология в ЛПУ</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>true</DirectAttachment>
+						<NotDirectAttachment>false</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"НОКБ им.Н.А.Семашко" ГБУЗ НО"</LPU_Name>
+						<LPU_ID>fa158662-8eba-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>61c5a095-26fd-11dd-b262-001279d33d9f</Treatment_ID>
+						<Treatment_Name>Амб. взрослые</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>true</DirectAttachment>
+						<NotDirectAttachment>false</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская клиническая больница № 38"</LPU_Name>
+						<LPU_ID>964616f6-0651-484f-af72-9c8fd30c5b04</LPU_ID>
+						<Treatment_ID>c10f9e8c-3799-11e2-94a8-002481adcebc</Treatment_ID>
+						<Treatment_Name>Стационар одного дня</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская клиническая больница № 38"</LPU_Name>
+						<LPU_ID>964616f6-0651-484f-af72-9c8fd30c5b04</LPU_ID>
+						<Treatment_ID>37712ff1-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Плановая госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская клиническая больница № 38"</LPU_Name>
+						<LPU_ID>964616f6-0651-484f-af72-9c8fd30c5b04</LPU_ID>
+						<Treatment_ID>37712ff2-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Экстренная госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская клиническая больница № 38"</LPU_Name>
+						<LPU_ID>964616f6-0651-484f-af72-9c8fd30c5b04</LPU_ID>
+						<Treatment_ID>61c5a095-26fd-11dd-b262-001279d33d9f</Treatment_ID>
+						<Treatment_Name>Амб. взрослые</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская клиническая больница № 38"</LPU_Name>
+						<LPU_ID>964616f6-0651-484f-af72-9c8fd30c5b04</LPU_ID>
+						<Treatment_ID>558d924c-bf94-11dd-b7bf-001f290776b6</Treatment_ID>
+						<Treatment_Name> ПНД в пределах границ города</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Клинический диагностический центр"НО ГБУЗ"</LPU_Name>
+						<LPU_ID>7d2a395c-8eb1-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>c10f9e8c-3799-11e2-94a8-002481adcebc</Treatment_ID>
+						<Treatment_Name>Стационар одного дня</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Клинический диагностический центр"НО ГБУЗ"</LPU_Name>
+						<LPU_ID>7d2a395c-8eb1-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>61c5a095-26fd-11dd-b262-001279d33d9f</Treatment_ID>
+						<Treatment_Name>Амб. взрослые</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>true</DirectAttachment>
+						<NotDirectAttachment>false</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"ЛПУ условное" отделение Нижегородский"</LPU_Name>
+						<LPU_ID>50c0a69d-bd92-11db-86c8-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff1-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Плановая госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"ЛПУ условное" отделение Нижегородский"</LPU_Name>
+						<LPU_ID>50c0a69d-bd92-11db-86c8-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff2-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Экстренная госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"ЛПУ условное" отделение Нижегородский"</LPU_Name>
+						<LPU_ID>50c0a69d-bd92-11db-86c8-0017085d7c0a</LPU_ID>
+						<Treatment_ID>d045bd5b-5832-11db-a75b-000802ce8208</Treatment_ID>
+						<Treatment_Name>Стоматология в ЛПУ</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>true</DirectAttachment>
+						<NotDirectAttachment>false</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"ЛПУ условное" отделение Нижегородский"</LPU_Name>
+						<LPU_ID>50c0a69d-bd92-11db-86c8-0017085d7c0a</LPU_ID>
+						<Treatment_ID>d045bd5e-5832-11db-a75b-000802ce8208</Treatment_ID>
+						<Treatment_Name>Стоматология в спец.клиниках</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>true</DirectAttachment>
+						<NotDirectAttachment>false</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"ЛПУ условное" отделение Нижегородский"</LPU_Name>
+						<LPU_ID>50c0a69d-bd92-11db-86c8-0017085d7c0a</LPU_ID>
+						<Treatment_ID>61c5a095-26fd-11dd-b262-001279d33d9f</Treatment_ID>
+						<Treatment_Name>Амб. взрослые</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>true</DirectAttachment>
+						<NotDirectAttachment>false</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"ЛПУ условное" отделение Нижегородский"</LPU_Name>
+						<LPU_ID>50c0a69d-bd92-11db-86c8-0017085d7c0a</LPU_ID>
+						<Treatment_ID>558d924a-bf94-11dd-b7bf-001f290776b6</Treatment_ID>
+						<Treatment_Name> СМП в пределах границ города</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"ЛПУ условное" отделение Нижегородский"</LPU_Name>
+						<LPU_ID>50c0a69d-bd92-11db-86c8-0017085d7c0a</LPU_ID>
+						<Treatment_ID>558d924c-bf94-11dd-b7bf-001f290776b6</Treatment_ID>
+						<Treatment_Name> ПНД в пределах границ города</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>true</DirectAttachment>
+						<NotDirectAttachment>false</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская кл. больница №30 Московского района" ГБУЗ НО</LPU_Name>
+						<LPU_ID>2e3773e1-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff1-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Плановая госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская кл. больница №30 Московского района" ГБУЗ НО</LPU_Name>
+						<LPU_ID>2e3773e1-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff2-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Экстренная госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская кл. больница №30 Московского района" ГБУЗ НО</LPU_Name>
+						<LPU_ID>2e3773e1-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>d045bd5b-5832-11db-a75b-000802ce8208</Treatment_ID>
+						<Treatment_Name>Стоматология в ЛПУ</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская кл. больница №30 Московского района" ГБУЗ НО</LPU_Name>
+						<LPU_ID>2e3773e1-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>61c5a095-26fd-11dd-b262-001279d33d9f</Treatment_ID>
+						<Treatment_Name>Амб. взрослые</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская кл. больница №30 Московского района" ГБУЗ НО</LPU_Name>
+						<LPU_ID>2e3773e1-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>558d924c-bf94-11dd-b7bf-001f290776b6</Treatment_ID>
+						<Treatment_Name> ПНД в пределах границ города</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская кл. больница №30 Московского района" ГБУЗ НО</LPU_Name>
+						<LPU_ID>2e3773e1-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff1-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Плановая госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская кл. больница №30 Московского района" ГБУЗ НО</LPU_Name>
+						<LPU_ID>2e3773e1-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff2-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Экстренная госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская кл. больница №30 Московского района" ГБУЗ НО</LPU_Name>
+						<LPU_ID>2e3773e1-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>d045bd5b-5832-11db-a75b-000802ce8208</Treatment_ID>
+						<Treatment_Name>Стоматология в ЛПУ</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская кл. больница №30 Московского района" ГБУЗ НО</LPU_Name>
+						<LPU_ID>2e3773e1-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>61c5a095-26fd-11dd-b262-001279d33d9f</Treatment_ID>
+						<Treatment_Name>Амб. взрослые</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская клиническая больница № 5" ГБУЗ"</LPU_Name>
+						<LPU_ID>12d5fd43-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff1-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Плановая госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская клиническая больница № 5" ГБУЗ"</LPU_Name>
+						<LPU_ID>12d5fd43-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff2-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Экстренная госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская клиническая больница № 5" ГБУЗ"</LPU_Name>
+						<LPU_ID>12d5fd43-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>61c5a095-26fd-11dd-b262-001279d33d9f</Treatment_ID>
+						<Treatment_Name>Амб. взрослые</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская кл. больница № 39" ГБУЗ НО"</LPU_Name>
+						<LPU_ID>12d5fd41-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff1-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Плановая госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская кл. больница № 39" ГБУЗ НО"</LPU_Name>
+						<LPU_ID>12d5fd41-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff2-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Экстренная госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская кл. больница № 39" ГБУЗ НО"</LPU_Name>
+						<LPU_ID>12d5fd41-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>d045bd5b-5832-11db-a75b-000802ce8208</Treatment_ID>
+						<Treatment_Name>Стоматология в ЛПУ</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская кл. больница № 39" ГБУЗ НО"</LPU_Name>
+						<LPU_ID>12d5fd41-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>61c5a095-26fd-11dd-b262-001279d33d9f</Treatment_ID>
+						<Treatment_Name>Амб. взрослые</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская кл. больница № 39" ГБУЗ НО"</LPU_Name>
+						<LPU_ID>12d5fd41-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>558d924c-bf94-11dd-b7bf-001f290776b6</Treatment_ID>
+						<Treatment_Name> ПНД в пределах границ города</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская кл. больница № 3 Н.Новгород" ГБУЗ НО"</LPU_Name>
+						<LPU_ID>12d5fd3e-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>c10f9e8c-3799-11e2-94a8-002481adcebc</Treatment_ID>
+						<Treatment_Name>Стационар одного дня</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская кл. больница № 3 Н.Новгород" ГБУЗ НО"</LPU_Name>
+						<LPU_ID>12d5fd3e-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff1-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Плановая госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская кл. больница № 3 Н.Новгород" ГБУЗ НО"</LPU_Name>
+						<LPU_ID>12d5fd3e-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>d045bd5b-5832-11db-a75b-000802ce8208</Treatment_ID>
+						<Treatment_Name>Стоматология в ЛПУ</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>true</DirectAttachment>
+						<NotDirectAttachment>false</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская кл. больница № 3 Н.Новгород" ГБУЗ НО"</LPU_Name>
+						<LPU_ID>12d5fd3e-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>61c5a095-26fd-11dd-b262-001279d33d9f</Treatment_ID>
+						<Treatment_Name>Амб. взрослые</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>true</DirectAttachment>
+						<NotDirectAttachment>false</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская больница № 28" ГБУЗ НО</LPU_Name>
+						<LPU_ID>12d5fd3a-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff1-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Плановая госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская больница № 28" ГБУЗ НО</LPU_Name>
+						<LPU_ID>12d5fd3a-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff2-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Экстренная госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская больница № 28" ГБУЗ НО</LPU_Name>
+						<LPU_ID>12d5fd3a-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>d045bd5b-5832-11db-a75b-000802ce8208</Treatment_ID>
+						<Treatment_Name>Стоматология в ЛПУ</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская больница № 28" ГБУЗ НО</LPU_Name>
+						<LPU_ID>12d5fd3a-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>61c5a095-26fd-11dd-b262-001279d33d9f</Treatment_ID>
+						<Treatment_Name>Амб. взрослые</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская кл. больница № 10" ГБУЗ НО" Учреждение"</LPU_Name>
+						<LPU_ID>12d5fd38-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>558d924c-bf94-11dd-b7bf-001f290776b6</Treatment_ID>
+						<Treatment_Name> ПНД в пределах границ города</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская кл. больница № 10" ГБУЗ НО" Учреждение"</LPU_Name>
+						<LPU_ID>12d5fd38-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff1-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Плановая госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская кл. больница № 10" ГБУЗ НО" Учреждение"</LPU_Name>
+						<LPU_ID>12d5fd38-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff2-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Экстренная госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская кл. больница № 10" ГБУЗ НО" Учреждение"</LPU_Name>
+						<LPU_ID>12d5fd38-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff1-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Плановая госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская кл. больница № 10" ГБУЗ НО" Учреждение"</LPU_Name>
+						<LPU_ID>12d5fd38-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff2-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Экстренная госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская кл. больница № 10" ГБУЗ НО" Учреждение"</LPU_Name>
+						<LPU_ID>12d5fd38-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>61c5a095-26fd-11dd-b262-001279d33d9f</Treatment_ID>
+						<Treatment_Name>Амб. взрослые</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская кл. больница № 10" ГБУЗ НО" Учреждение"</LPU_Name>
+						<LPU_ID>12d5fd38-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>d045bd5b-5832-11db-a75b-000802ce8208</Treatment_ID>
+						<Treatment_Name>Стоматология в ЛПУ</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская кл. больница № 10" ГБУЗ НО" Учреждение"</LPU_Name>
+						<LPU_ID>12d5fd38-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>d045bd5e-5832-11db-a75b-000802ce8208</Treatment_ID>
+						<Treatment_Name>Стоматология в спец.клиниках</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская кл. больница № 10" ГБУЗ НО" Учреждение"</LPU_Name>
+						<LPU_ID>12d5fd38-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>61c5a095-26fd-11dd-b262-001279d33d9f</Treatment_ID>
+						<Treatment_Name>Амб. взрослые</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"МРТ-Диагностика" ООО</LPU_Name>
+						<LPU_ID>a4888db8-0dd7-41dc-9376-0acbd12bae51</LPU_ID>
+						<Treatment_ID>61c5a095-26fd-11dd-b262-001279d33d9f</Treatment_ID>
+						<Treatment_Name>Амб. взрослые</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Центр медицинской профилактики ГАЗ" ЧУ</LPU_Name>
+						<LPU_ID>d585594a-968c-11dc-bae3-001279d3438f</LPU_ID>
+						<Treatment_ID>c10f9e8c-3799-11e2-94a8-002481adcebc</Treatment_ID>
+						<Treatment_Name>Стационар одного дня</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Центр медицинской профилактики ГАЗ" ЧУ</LPU_Name>
+						<LPU_ID>d585594a-968c-11dc-bae3-001279d3438f</LPU_ID>
+						<Treatment_ID>3bc0540a-bad7-11e1-9d51-002481aec094</Treatment_ID>
+						<Treatment_Name>Иммунопрофилактика (вакцинация)</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Центр медицинской профилактики ГАЗ" ЧУ</LPU_Name>
+						<LPU_ID>d585594a-968c-11dc-bae3-001279d3438f</LPU_ID>
+						<Treatment_ID>61c5a095-26fd-11dd-b262-001279d33d9f</Treatment_ID>
+						<Treatment_Name>Амб. взрослые</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>true</DirectAttachment>
+						<NotDirectAttachment>false</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Центр медицинской профилактики ГАЗ" ЧУ</LPU_Name>
+						<LPU_ID>d585594a-968c-11dc-bae3-001279d3438f</LPU_ID>
+						<Treatment_ID>558d924a-bf94-11dd-b7bf-001f290776b6</Treatment_ID>
+						<Treatment_Name> СМП в пределах границ города</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Центр медицинской профилактики ГАЗ" ЧУ</LPU_Name>
+						<LPU_ID>d585594a-968c-11dc-bae3-001279d3438f</LPU_ID>
+						<Treatment_ID>558d924c-bf94-11dd-b7bf-001f290776b6</Treatment_ID>
+						<Treatment_Name> ПНД в пределах границ города</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>true</DirectAttachment>
+						<NotDirectAttachment>false</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Академия экологии человека" ООО</LPU_Name>
+						<LPU_ID>aa521dfe-8ead-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>61c5a095-26fd-11dd-b262-001279d33d9f</Treatment_ID>
+						<Treatment_Name>Амб. взрослые</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>true</DirectAttachment>
+						<NotDirectAttachment>false</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская клиническая больница № 13" Автозаводского р-на" ГБУЗ НО"</LPU_Name>
+						<LPU_ID>91d13e01-8ead-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff1-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Плановая госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская клиническая больница № 13" Автозаводского р-на" ГБУЗ НО"</LPU_Name>
+						<LPU_ID>91d13e01-8ead-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff2-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Экстренная госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская клиническая больница № 13" Автозаводского р-на" ГБУЗ НО"</LPU_Name>
+						<LPU_ID>91d13e01-8ead-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>d045bd5b-5832-11db-a75b-000802ce8208</Treatment_ID>
+						<Treatment_Name>Стоматология в ЛПУ</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>true</DirectAttachment>
+						<NotDirectAttachment>false</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская клиническая больница № 13" Автозаводского р-на" ГБУЗ НО"</LPU_Name>
+						<LPU_ID>91d13e01-8ead-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>61c5a095-26fd-11dd-b262-001279d33d9f</Treatment_ID>
+						<Treatment_Name>Амб. взрослые</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>true</DirectAttachment>
+						<NotDirectAttachment>false</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Клиника "Персона" ООО</LPU_Name>
+						<LPU_ID>7c73e94c-b772-11db-bef8-001279d3438e</LPU_ID>
+						<Treatment_ID>3bc0540a-bad7-11e1-9d51-002481aec094</Treatment_ID>
+						<Treatment_Name>Иммунопрофилактика (вакцинация)</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Клиника "Персона" ООО</LPU_Name>
+						<LPU_ID>7c73e94c-b772-11db-bef8-001279d3438e</LPU_ID>
+						<Treatment_ID>61c5a095-26fd-11dd-b262-001279d33d9f</Treatment_ID>
+						<Treatment_Name>Амб. взрослые</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Клиника "Персона" ООО</LPU_Name>
+						<LPU_ID>7c73e94c-b772-11db-bef8-001279d3438e</LPU_ID>
+						<Treatment_ID>558d924c-bf94-11dd-b7bf-001f290776b6</Treatment_ID>
+						<Treatment_Name> ПНД в пределах границ города</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Клиника "Персона" ООО</LPU_Name>
+						<LPU_ID>7c73e94c-b772-11db-bef8-001279d3438e</LPU_ID>
+						<Treatment_ID>c10f9e8c-3799-11e2-94a8-002481adcebc</Treatment_ID>
+						<Treatment_Name>Стационар одного дня</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Фарма Дентал" ООО</LPU_Name>
+						<LPU_ID>40c2c126-7c66-4c85-becb-e2d265c36318</LPU_ID>
+						<Treatment_ID>d045bd5e-5832-11db-a75b-000802ce8208</Treatment_ID>
+						<Treatment_Name>Стоматология в спец.клиниках</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Медэкспресс-НН" АНО</LPU_Name>
+						<LPU_ID>2c708ea7-8eb7-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>61c5a095-26fd-11dd-b262-001279d33d9f</Treatment_ID>
+						<Treatment_Name>Амб. взрослые</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Медэкспресс-НН" АНО</LPU_Name>
+						<LPU_ID>2c708ea7-8eb7-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>558d924a-bf94-11dd-b7bf-001f290776b6</Treatment_ID>
+						<Treatment_Name> СМП в пределах границ города</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Медэкспресс-НН" АНО</LPU_Name>
+						<LPU_ID>2c708ea7-8eb7-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>558d924c-bf94-11dd-b7bf-001f290776b6</Treatment_ID>
+						<Treatment_Name> ПНД в пределах границ города</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Медэкспресс-НН" АНО</LPU_Name>
+						<LPU_ID>2c708ea7-8eb7-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>61c5a095-26fd-11dd-b262-001279d33d9f</Treatment_ID>
+						<Treatment_Name>Амб. взрослые</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Медэкспресс-НН" АНО</LPU_Name>
+						<LPU_ID>2c708ea7-8eb7-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>558d924a-bf94-11dd-b7bf-001f290776b6</Treatment_ID>
+						<Treatment_Name> СМП в пределах границ города</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Медэкспресс-НН" АНО</LPU_Name>
+						<LPU_ID>2c708ea7-8eb7-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>558d924c-bf94-11dd-b7bf-001f290776b6</Treatment_ID>
+						<Treatment_Name> ПНД в пределах границ города</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"ГАУЗ НО "ОСП" филиал Сормовский № 1"</LPU_Name>
+						<LPU_ID>9cf96a6f-10a1-11e3-ac85-0017a477083a</LPU_ID>
+						<Treatment_ID>d045bd5e-5832-11db-a75b-000802ce8208</Treatment_ID>
+						<Treatment_Name>Стоматология в спец.клиниках</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>true</DirectAttachment>
+						<NotDirectAttachment>false</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"ДКБ на ст. Нижний Новгород ОАО "РЖД" ОАО</LPU_Name>
+						<LPU_ID>9a1c3aae-8eb1-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>c10f9e8c-3799-11e2-94a8-002481adcebc</Treatment_ID>
+						<Treatment_Name>Стационар одного дня</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"ДКБ на ст. Нижний Новгород ОАО "РЖД" ОАО</LPU_Name>
+						<LPU_ID>9a1c3aae-8eb1-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>3bc0540a-bad7-11e1-9d51-002481aec094</Treatment_ID>
+						<Treatment_Name>Иммунопрофилактика (вакцинация)</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"ДКБ на ст. Нижний Новгород ОАО "РЖД" ОАО</LPU_Name>
+						<LPU_ID>9a1c3aae-8eb1-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff1-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Плановая госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"ДКБ на ст. Нижний Новгород ОАО "РЖД" ОАО</LPU_Name>
+						<LPU_ID>9a1c3aae-8eb1-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff2-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Экстренная госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"ДКБ на ст. Нижний Новгород ОАО "РЖД" ОАО</LPU_Name>
+						<LPU_ID>9a1c3aae-8eb1-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>d045bd5b-5832-11db-a75b-000802ce8208</Treatment_ID>
+						<Treatment_Name>Стоматология в ЛПУ</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>true</DirectAttachment>
+						<NotDirectAttachment>false</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"ДКБ на ст. Нижний Новгород ОАО "РЖД" ОАО</LPU_Name>
+						<LPU_ID>9a1c3aae-8eb1-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>61c5a095-26fd-11dd-b262-001279d33d9f</Treatment_ID>
+						<Treatment_Name>Амб. взрослые</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>true</DirectAttachment>
+						<NotDirectAttachment>false</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"ДКБ на ст. Нижний Новгород ОАО "РЖД" ОАО</LPU_Name>
+						<LPU_ID>9a1c3aae-8eb1-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>558d924c-bf94-11dd-b7bf-001f290776b6</Treatment_ID>
+						<Treatment_Name> ПНД в пределах границ города</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>true</DirectAttachment>
+						<NotDirectAttachment>false</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Централизованная лаборатория "АВК-Мед" ООО</LPU_Name>
+						<LPU_ID>7731de20-bd40-4ceb-8b21-b5d69222ae8f</LPU_ID>
+						<Treatment_ID>61c5a095-26fd-11dd-b262-001279d33d9f</Treatment_ID>
+						<Treatment_Name>Амб. взрослые</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>true</DirectAttachment>
+						<NotDirectAttachment>false</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"НКХЦ" ОАО</LPU_Name>
+						<LPU_ID>679b21e1-8eb8-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>c10f9e8c-3799-11e2-94a8-002481adcebc</Treatment_ID>
+						<Treatment_Name>Стационар одного дня</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"НКХЦ" ОАО</LPU_Name>
+						<LPU_ID>679b21e1-8eb8-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff1-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Плановая госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"НКХЦ" ОАО</LPU_Name>
+						<LPU_ID>679b21e1-8eb8-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff2-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Экстренная госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"НКХЦ" ОАО</LPU_Name>
+						<LPU_ID>679b21e1-8eb8-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>61c5a095-26fd-11dd-b262-001279d33d9f</Treatment_ID>
+						<Treatment_Name>Амб. взрослые</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская клиническая больница №7 имени Е.Л.Березова"</LPU_Name>
+						<LPU_ID>6716aafd-eff6-47ee-81f0-36ca5eab40e8</LPU_ID>
+						<Treatment_ID>37712ff1-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Плановая госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская клиническая больница №7 имени Е.Л.Березова"</LPU_Name>
+						<LPU_ID>6716aafd-eff6-47ee-81f0-36ca5eab40e8</LPU_ID>
+						<Treatment_ID>37712ff2-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Экстренная госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская клиническая больница №7 имени Е.Л.Березова"</LPU_Name>
+						<LPU_ID>6716aafd-eff6-47ee-81f0-36ca5eab40e8</LPU_ID>
+						<Treatment_ID>61c5a095-26fd-11dd-b262-001279d33d9f</Treatment_ID>
+						<Treatment_Name>Амб. взрослые</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"НИКА СПРИНГ МЕД" ООО</LPU_Name>
+						<LPU_ID>59bbb761-9a6b-4a5e-83c6-704922275fd0</LPU_ID>
+						<Treatment_ID>61c5a095-26fd-11dd-b262-001279d33d9f</Treatment_ID>
+						<Treatment_Name>Амб. взрослые</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>true</DirectAttachment>
+						<NotDirectAttachment>false</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"МСЧ МВД России по Нижегородской области" ФКУЗ"</LPU_Name>
+						<LPU_ID>52e914a9-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>c10f9e8c-3799-11e2-94a8-002481adcebc</Treatment_ID>
+						<Treatment_Name>Стационар одного дня</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"МСЧ МВД России по Нижегородской области" ФКУЗ"</LPU_Name>
+						<LPU_ID>52e914a9-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff1-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Плановая госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"МСЧ МВД России по Нижегородской области" ФКУЗ"</LPU_Name>
+						<LPU_ID>52e914a9-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>37712ff2-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Экстренная госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"МСЧ МВД России по Нижегородской области" ФКУЗ"</LPU_Name>
+						<LPU_ID>52e914a9-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>d045bd5b-5832-11db-a75b-000802ce8208</Treatment_ID>
+						<Treatment_Name>Стоматология в ЛПУ</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>true</DirectAttachment>
+						<NotDirectAttachment>false</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"МСЧ МВД России по Нижегородской области" ФКУЗ"</LPU_Name>
+						<LPU_ID>52e914a9-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>61c5a095-26fd-11dd-b262-001279d33d9f</Treatment_ID>
+						<Treatment_Name>Амб. взрослые</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>true</DirectAttachment>
+						<NotDirectAttachment>false</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"МСЧ МВД России по Нижегородской области" ФКУЗ"</LPU_Name>
+						<LPU_ID>52e914a9-8eaf-11db-926c-0017085d7c0a</LPU_ID>
+						<Treatment_ID>558d924c-bf94-11dd-b7bf-001f290776b6</Treatment_ID>
+						<Treatment_Name> ПНД в пределах границ города</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>true</DirectAttachment>
+						<NotDirectAttachment>false</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская больница №33 Ленинского района" ГБУЗ НО"</LPU_Name>
+						<LPU_ID>28e21000-acbe-4c5c-890f-4ba40cb391a0</LPU_ID>
+						<Treatment_ID>d045bd5b-5832-11db-a75b-000802ce8208</Treatment_ID>
+						<Treatment_Name>Стоматология в ЛПУ</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская больница №33 Ленинского района" ГБУЗ НО"</LPU_Name>
+						<LPU_ID>28e21000-acbe-4c5c-890f-4ba40cb391a0</LPU_ID>
+						<Treatment_ID>61c5a095-26fd-11dd-b262-001279d33d9f</Treatment_ID>
+						<Treatment_Name>Амб. взрослые</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская больница №33 Ленинского района" ГБУЗ НО"</LPU_Name>
+						<LPU_ID>28e21000-acbe-4c5c-890f-4ba40cb391a0</LPU_ID>
+						<Treatment_ID>558d924c-bf94-11dd-b7bf-001f290776b6</Treatment_ID>
+						<Treatment_Name> ПНД в пределах границ города</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская больница №33 Ленинского района" ГБУЗ НО"</LPU_Name>
+						<LPU_ID>28e21000-acbe-4c5c-890f-4ba40cb391a0</LPU_ID>
+						<Treatment_ID>c10f9e8c-3799-11e2-94a8-002481adcebc</Treatment_ID>
+						<Treatment_Name>Стационар одного дня</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская больница №33 Ленинского района" ГБУЗ НО"</LPU_Name>
+						<LPU_ID>28e21000-acbe-4c5c-890f-4ba40cb391a0</LPU_ID>
+						<Treatment_ID>37712ff1-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Плановая госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Городская больница №33 Ленинского района" ГБУЗ НО"</LPU_Name>
+						<LPU_ID>28e21000-acbe-4c5c-890f-4ba40cb391a0</LPU_ID>
+						<Treatment_ID>37712ff2-43b6-11db-a758-000802ce8208</Treatment_ID>
+						<Treatment_Name>Экстренная госпитализация</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"РОСТ-медицина -НН" ООО</LPU_Name>
+						<LPU_ID>e2f4dfb7-93bb-4876-b6c6-ad971098dc44</LPU_ID>
+						<Treatment_ID>61c5a095-26fd-11dd-b262-001279d33d9f</Treatment_ID>
+						<Treatment_Name>Амб. взрослые</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>true</DirectAttachment>
+						<NotDirectAttachment>false</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"РОСТ-медицина -НН" ООО</LPU_Name>
+						<LPU_ID>e2f4dfb7-93bb-4876-b6c6-ad971098dc44</LPU_ID>
+						<Treatment_ID>558d924c-bf94-11dd-b7bf-001f290776b6</Treatment_ID>
+						<Treatment_Name> ПНД в пределах границ города</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>true</DirectAttachment>
+						<NotDirectAttachment>false</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+					<ProgrammServices>
+						<LPU_Name>"Прозрение" ООО</LPU_Name>
+						<LPU_ID>e0f9a2e0-b11c-11db-bef8-001279d3438e</LPU_ID>
+						<Treatment_ID>61c5a095-26fd-11dd-b262-001279d33d9f</Treatment_ID>
+						<Treatment_Name>Амб. взрослые</Treatment_Name>
+						<BeginDate>0001-01-01</BeginDate>
+						<EndDate>0001-01-01</EndDate>
+						<DirectAttachment>false</DirectAttachment>
+						<NotDirectAttachment>true</NotDirectAttachment>
+						<Rating>-1</Rating>
+						<NumberLayer>1</NumberLayer>
+						<PercentCopayment>0</PercentCopayment>
+						<OutLK>0</OutLK>
+					</ProgrammServices>
+				</ProgrammList>
+				<Rezult xmlns="http://www.integrator.sogaz.ru">true</Rezult>
+			</m:return>
+		</m:getInsProgrammDetailsResponse>
+	</soap:Body>
+</soap:Envelope>

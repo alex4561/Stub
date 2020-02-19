@@ -1,0 +1,28 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<SOAP-ENV:Body>
+		<m:SetB2BOrder xmlns:m="http://www.perconalcabinet.sogaz.ru">
+			<m:ID_Request>A53B0E0F-60F0-4F17-86F6-D43249B3C398</m:ID_Request>
+			<m:ID_Dog>801a399d-01b7-4a35-87e6-0c399363bff7</m:ID_Dog>
+			<m:TypeOrder>2</m:TypeOrder>
+			<m:Status>В очереди</m:Status>
+			<m:OperationList>
+				<m:Operation>
+					<m:PolicyList>
+						<m:Policy>
+							<m:ID>db9dcd7b-15a4-11e9-8271-5cb90192efd5</m:ID>
+							<m:Number>0619 LM 000061/00026</m:Number>
+							<m:LastName>Патина</m:LastName>
+							<m:FirstName>Анна</m:FirstName>
+							<m:MiddleName>Дмитриевна</m:MiddleName>
+							<m:Birthday>1994-04-14T00:00:00</m:Birthday>
+							<m:Sex>Женский</m:Sex>
+							<m:LastNameNew>Леснянская</m:LastNameNew>
+							<m:DateOperation>2019-08-29T00:00:00</m:DateOperation>
+						</m:Policy>
+					</m:PolicyList>
+					<m:TypeOperation>Смена фамилии</m:TypeOperation>
+				</m:Operation>
+			</m:OperationList>
+		</m:SetB2BOrder>
+	</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

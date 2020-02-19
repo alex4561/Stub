@@ -1,0 +1,11 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:m0="http://www.integrator.sogaz.ru">
+	<SOAP-ENV:Body>
+		<m:CheckB2BOrder xmlns:m="http://www.perconalcabinet.sogaz.ru">
+			<m:RequestList>
+				<m0:ID>E519B3E2-3095-4255-81C9-D1771D1E0683</m0:ID>
+				<m0:ID>A53B0E0F-60F0-4F17-86F6-D43249B3C398</m0:ID>
+				<m0:ID>B482ED95-A1AD-4C7F-827C-46D711B41518</m0:ID>
+			</m:RequestList>
+		</m:CheckB2BOrder>
+	</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

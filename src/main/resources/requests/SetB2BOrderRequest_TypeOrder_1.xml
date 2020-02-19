@@ -1,0 +1,46 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<SOAP-ENV:Body>
+		<m:SetB2BOrder xmlns:m="http://www.perconalcabinet.sogaz.ru">
+			<m:ID_Request>E519B3E2-3095-4255-81C9-D1771D1E0682</m:ID_Request>
+			<m:ID_Dog>52c5c44a-b782-4d7e-8019-a8d29d4bacda</m:ID_Dog>
+			<m:TypeOrder>1</m:TypeOrder>
+			<m:Status>Проект</m:Status>
+			<m:OperationList>
+			  <m:Operation>
+				<m:PolicyList>
+				  <m:Policy>
+					<m:ID>00000000-0000-0000-0000-000000000000</m:ID>
+					<m:Number>0</m:Number>
+					<m:LastName>Жаркова</m:LastName>
+					<m:FirstName>Анна</m:FirstName>
+					<m:MiddleName>Николаевна</m:MiddleName>
+					<m:Birthday>1958-11-05T00:00:00</m:Birthday>
+					<m:Sex>Женский</m:Sex>
+					<m:Address>Москва, ул. Пражская</m:Address>
+					<m:EMail />
+					<m:Phone />
+					<m:Position />
+					<m:Department />
+					<m:TabNumber />
+					<m:LastNameNew />
+					<m:FirstNameNew />
+					<m:MiddleNameNew />
+					<m:SexNew />
+					<m:ProgrammList>
+					  <m:TypeList>Включение</m:TypeList>
+					  <m:Programm>
+						<m:ID>c7b46bb8-0006-48e0-ab14-e64d2966fc5f</m:ID>
+						<m:Code>ЦБД015679 </m:Code>
+						<m:Name>Программа  3 Cтандарт 1 Москва</m:Name>
+					  </m:Programm>
+					</m:ProgrammList>
+					<m:DateOperation>2019-08-29T00:00:00</m:DateOperation>
+					<m:DateFinish>2019-12-31T00:00:00</m:DateFinish>
+				  </m:Policy>
+				</m:PolicyList>
+				<m:TypeOperation>Включение</m:TypeOperation>
+			  </m:Operation>
+			</m:OperationList>
+		</m:SetB2BOrder>
+	</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
