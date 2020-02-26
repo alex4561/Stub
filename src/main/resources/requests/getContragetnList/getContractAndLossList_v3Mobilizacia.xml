@@ -1,10 +1,11 @@
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:m0="http://www.integrator.sogaz.ru">
 	<SOAP-ENV:Body>
-		<m:getInsProgrammDetails xmlns:m="http://www.perconalcabinet.sogaz.ru">
-			<m:ProgrammIDList>
-				<m0:ID>9999978b-c0b6-4fa5-8aec-77028fb0dc63</m0:ID>
-				<m0:ID>9999954c-9571-4015-8029-ec83f4f335b9</m0:ID>
-			</m:ProgrammIDList>
-		</m:getInsProgrammDetails>
+		<m:getContractAndLossList_v3 xmlns:m="http://www.perconalcabinet.sogaz.ru">
+			<m:InsuredIDList>
+				<m0:ID>К_99999523-7e34-11db-8708-003048800b16</m0:ID>
+			</m:InsuredIDList>
+			<m:Depth>20</m:Depth>
+			<m:LastGUID></m:LastGUID>
+		</m:getContractAndLossList_v3>
 	</SOAP-ENV:Body>
 </SOAP-ENV:Envelope>

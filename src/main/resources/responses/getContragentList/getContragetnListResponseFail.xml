@@ -1,0 +1,1 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"> <soap:Body> <m:getContragentListResponse xmlns:m="http://www.perconalcabinet.sogaz.ru"> <m:return xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> <m:Result>fail</m:Result> <m:Message/> </m:return> </m:getContragentListResponse> </soap:Body> </soap:Envelope>

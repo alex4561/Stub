@@ -1,0 +1,9 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <m:getContractAndLossList_v3Response xmlns:m="http://www.perconalcabinet.sogaz.ru">
+            <m:return xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <m:Package/>
+            </m:return>
+        </m:getContractAndLossList_v3Response>
+    </soap:Body>
+</soap:Envelope>

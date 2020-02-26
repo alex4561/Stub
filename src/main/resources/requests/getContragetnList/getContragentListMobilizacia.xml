@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:per="http://www.perconalcabinet.sogaz.ru">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <per:getContragentList>
+            <per:INN>8971426272</per:INN>
+            <per:KPP>014644855</per:KPP>
+        </per:getContragentList>
+    </soapenv:Body>
+</soapenv:Envelope>
