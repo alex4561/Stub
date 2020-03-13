@@ -1,5 +1,7 @@
 package com.ru.softmachine.sogazstub;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpEntity;
@@ -7,13 +9,16 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.filter.CommonsRequestLoggingFilter;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.logging.Logger;
+
+
 
 @RestController
 public class getConragentListStub {
@@ -22,7 +27,11 @@ public class getConragentListStub {
     final Pattern KPP = Pattern.compile("<per:KPP>(.*)<\\/per:KPP>");
 
 
-    @RequestMapping(value = "/getConragentListStub", produces = MediaType.TEXT_XML_VALUE, method = {RequestMethod.GET, RequestMethod.POST})
+    @RequestMapping(
+            value = "/getContragentList",
+            headers = {"SOAPAction=http://www.perconalcabinet.sogaz.ru#PersonalCabinet:getContragentList"},
+            produces = MediaType.TEXT_XML_VALUE, method = {RequestMethod.GET, RequestMethod.POST})
+
     public String index(HttpEntity<String> httpEntity) throws InterruptedException {
         String raw = httpEntity.getBody();
 
@@ -40,10 +49,7 @@ public class getConragentListStub {
             try {
                 Resource resource = new ClassPathResource("responses/getContragentList/getContragentLisResponseMobilizacia.xml");
 
-                File file = resource.getFile();
-
-
-                BufferedReader reader = new BufferedReader(new FileReader(file));
+                BufferedReader reader = new BufferedReader(new InputStreamReader(resource.getInputStream()));
 
                 String resp;
                 while((resp = reader.readLine()) != null) {
@@ -77,6 +83,7 @@ public class getConragentListStub {
             }
         }
         return "NULL";
+
     }
 
 }

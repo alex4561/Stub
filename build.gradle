@@ -17,8 +17,6 @@ dependencies {
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
-	compile 'org.testng:testng:7.1.0'
-	compile 'org.seleniumhq.selenium:selenium-java:3.12.0'
 	compile group: 'org.springframework', name: 'spring-core', version: '5.2.3.RELEASE'
 	compile group: 'org.springframework', name: 'spring-web', version: '5.2.3.RELEASE'
 	compile group: 'com.mashape.unirest', name: 'unirest-java', version: '1.4.9'
@@ -30,6 +28,18 @@ dependencies {
 	compile group: 'commons-logging', name: 'commons-logging', version: '1.2'
 	compile group: 'org.apache.httpcomponents', name: 'httpcore-nio', version: '4.4.13'
 
+}
+
+jar {
+	manifest {
+		attributes(
+				'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+				'Main-Class': 'com.ru.softmachine.sogazstub.SogazStubApplication'
+		)
+	}
+	from {
+		configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+	}
 }
 
 test {

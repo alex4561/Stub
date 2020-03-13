@@ -8,10 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -20,7 +17,7 @@ public class getInsProgrammDetailsStub {
 
     final Pattern ProgID1 = Pattern.compile("<m0:ID>(.*)<\\/m0:ID>");
 
-    @RequestMapping(value = "/getInsProgrammDetailsStub", produces = MediaType.TEXT_XML_VALUE, method = {RequestMethod.GET, RequestMethod.POST})
+    @RequestMapping(value = "/getInsProgrammDetails", produces = MediaType.TEXT_XML_VALUE, method = {RequestMethod.GET, RequestMethod.POST})
     public String index(HttpEntity<String> httpEntity) throws InterruptedException {
         String raw = httpEntity.getBody();
 
@@ -54,10 +51,7 @@ public class getInsProgrammDetailsStub {
             try {
                 Resource resource = new ClassPathResource("responses/getInsProgrammDetails/getInsProgrammDetailsResponseMobilizacia.xml");
 
-                File file = resource.getFile();
-
-
-                BufferedReader reader = new BufferedReader(new FileReader(file));
+                BufferedReader reader = new BufferedReader(new InputStreamReader(resource.getInputStream()));
 
                 String resp;
                 while((resp = reader.readLine()) != null) {
